@@ -8,18 +8,19 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://github.com/maddox05" target="_blank">
-          <img src={githubICO} className="logo" width="90px" height="90px" alt="Github Logo" />
+        <a href="https://github.com/maddox05" target="_blank" rel="noreferrer">
+          <img src={githubICO} className="nocss" width="90px" height="90px" alt="Github Logo" />
         </a>
       </div>
-      <h1>Maddox05's Github Link</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+      <h1>My Github Link</h1>
+      <div className="nocss">
+        <button onClick=
+                    {() => setCount((count) => count + 1)}>
           count is {count}
         </button>
 
       </div>
-      <p className="read-the-docs">
+      <p className="nocss">
         Click on the Github logo to learn more
       </p>
     </>
