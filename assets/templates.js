@@ -4,7 +4,7 @@ fetch('includes/google-analytics.html')
     .then(response => response.text())
     .then(data => {
         template_analytics.innerHTML = data;
-        document.head.appendChild(template_analytics.content);
+        document.head.insertBefore(template_analytics.content, document.head.firstChild);
         console.log('Analytics template added to head')
 
     })
