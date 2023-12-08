@@ -12,12 +12,62 @@
       <!--* Styles -->
       <link rel="stylesheet" href="assets/css/styles.css" />
       <link rel="icon" type="image/webp" href="assets/img/favicon.webp" />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+      />
 
       <!--^ JS -->
       <script src="assets/js/main.js"></script>
     </head>
     <body>
-      <!-- Stuff here -->
+      <header class="flex-row">
+        <div class="flex-row">
+          <img
+            src="assets/img/favicon.webp"
+            alt="Visual Studio Code Icon"
+            class="small-icon"
+          />
+          <button type="button">File</button>
+          <button type="button">Edit</button>
+          <button type="button">Selection</button>
+          <button type="button">View</button>
+          <button type="button">Go</button>
+          <button type="button">Run</button>
+          <button type="button">Terminal</button>
+          <button type="button">Help</button>
+        </div>
+        <div class="flex-row">
+          <i class="bi bi-arrow-left-short"></i>
+          <i class="bi bi-arrow-right-short disabled"></i>
+          <div class="group">
+            <i class="bi bi-search disabled"></i>
+            <input type="search" placeholder="maddox05.github.io" disabled />
+          </div>
+        </div>
+        <div class="flex-row">
+          <i class="bi bi-circle-fill red"></i>
+          <i class="bi bi-circle-fill yellow"></i>
+          <i class="bi bi-circle-fill green"></i>
+        </div>
+      </header>
+      <div class="sidebar flex-col">
+        <div class="flex-col">
+          <i class="bi bi-files"></i>
+          <i class="bi bi-github"></i>
+          <i class="bi bi-file-earmark-code"></i>
+          <i class="bi bi-envelope"></i>
+        </div>
+        <div class="bottom flex-col">
+          <i class="bi bi-person-circle"></i>
+          <i class="bi bi-gear"></i>
+        </div>
+      </div>
+      <div class="explorer"></div>
+      <footer clas="flex-row">
+        <div class="flex-row"></div>
+        <div class="flex-row"></div>
+      </footer>
     </body>
   </html>
 </html>

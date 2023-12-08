@@ -1,0 +1,163 @@
+body {
+  background-color: #1c2433;
+  margin: 0;
+}
+
+/*~ Header */
+header {
+  background-color: #171c28;
+  padding: 10px;
+  height: 18px;
+  display: justify;
+  justify-content: space-between;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+header .small-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+header button {
+  margin-right: 2px;
+  background: none;
+  border: 0;
+  border-radius: 5px;
+  color: #d7dce2;
+  text-align: center;
+}
+
+header button:hover {
+  background-color: #2e3b54;
+}
+
+header input {
+  background-color: #232833;
+  color: #d7dce2;
+  -webkit-text-fill-color: #d7dce2;
+  border: 1px solid #464b56;
+  border-radius: 8px;
+  padding: 5px;
+  width: 250px;
+  text-align: center;
+  cursor: pointer;
+}
+
+header input:hover {
+  background-color: #292e39;
+  border: 1px solid #5d626c;
+}
+
+.bi {
+  border: 0;
+  border-radius: 5px;
+  color: #d7dce2;
+  font-size: 18px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.bi:hover {
+  background-color: #2e3b54;
+}
+
+.disabled {
+  color: #5c616b;
+  pointer-events: none;
+}
+
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+}
+
+.bi-search {
+  position: absolute;
+  left: 2.75rem;
+  color: #a5a6a8;
+  font-size: 12px;
+  transform: scale(-1, 1);
+}
+
+.red,
+.yellow,
+.green {
+  cursor: pointer;
+  transition: color 0.1s ease-out;
+  font-size: 12px;
+  height: 13px;
+  margin-top: 2px;
+}
+
+.red:hover,
+.yellow:hover,
+.green:hover {
+  background: none;
+}
+
+.red {
+  color: #fc5753;
+}
+
+.red:hover {
+  color: #af3c39;
+}
+
+.yellow {
+  color: #fdbc40;
+}
+
+.yellow:hover {
+  color: #b0832c;
+}
+
+.green {
+  color: #32c747;
+  margin: 0;
+  margin-top: 2px;
+}
+
+.green:hover {
+  color: #1e7a2b;
+}
+
+/*~ Left Sidebar */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  height: calc(100vh - 38px);
+  justify-content: space-between;
+  background-color: #171c28;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  max-height: max-content;
+}
+
+.sidebar i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar .bi {
+  font-size: 28px;
+  width: 32px;
+  margin-right: 0;
+  margin: 10px;
+  color: #5a647e;
+}
+
+.sidebar .bi:hover {
+  background: none;
+  color: #8695b7;
+}
