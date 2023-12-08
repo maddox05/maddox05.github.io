@@ -143,7 +143,8 @@ header input:hover {
   max-height: max-content;
 }
 
-.sidebar i {
+.sidebar i,
+.explorer i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,4 +161,55 @@ header input:hover {
 .sidebar .bi:hover {
   background: none;
   color: #8695b7;
+}
+
+/*~ Explorer */
+h3,
+h4 {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.67rem;
+  font-weight: normal;
+  color: #ffcc66;
+  cursor: default;
+}
+
+h4 {
+  cursor: pointer;
+}
+
+.explorer {
+  background-color: #171c28;
+  padding: 10px;
+  height: calc(100vh - 58px);
+  min-width: 250px;
+}
+
+.explorer .center {
+  display: flex;
+  align-items: center;
+}
+
+.explorer i {
+  width: 20px;
+  height: 20px;
+}
+
+.explorer .bi {
+  background: none;
+  transition: transform 0.1s ease-in-out;
+}
+
+.bi .rotate-90 {
+  transform: rotate(90deg);
+}
+
+.category {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.ti-brand-html5 {
+  color: #e44d25;
+  font-size: 2rem;
 }
