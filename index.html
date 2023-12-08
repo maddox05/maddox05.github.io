@@ -74,18 +74,75 @@
             <i class="bi bi-chevron-down" id="arrowDown"></i>
             <h4>MADDOX05.GITHUB.IO</h4>
           </div>
-          <div class="flex-col">
-            <div class="page-button flex-row"></div>
-            <div class="page-button flex-row"></div>
-            <div class="page-button flex-row"></div>
-            <div class="page-button flex-row"></div>
-            <div class="page-button flex-row"></div>
+          <div id="files" class="flex-col">
+            <div class="page-button flex-row">
+              <img
+                src="assets/img/language-javascript.svg"
+                alt="JavaScript Icon"
+                class="small-icon"
+              />
+              <h5>home.js</h5>
+            </div>
+            <div class="page-button flex-row">
+              <img
+                src="assets/img/language-html5.svg"
+                alt="HTML5 Icon"
+                class="small-icon"
+              />
+              <h5>about.html</h5>
+            </div>
+            <div class="page-button flex-row">
+              <img
+                src="assets/img/language-markdown.svg"
+                alt="Markdown Icon"
+                class="small-icon"
+              />
+              <h5>github.md</h5>
+            </div>
+            <div class="page-button flex-row">
+              <img
+                src="assets/img/language-python.svg"
+                alt="Python Icon"
+                class="small-icon"
+              />
+              <h5>projects.py</h5>
+            </div>
+            <div class="page-button flex-row">
+              <img
+                src="assets/img/language-yml.svg"
+                alt="YAML Icon"
+                class="small-icon"
+              />
+              <h5>contact.yml</h5>
+            </div>
           </div>
         </div>
       </div>
-      <footer clas="flex-row">
-        <div class="flex-row"></div>
-        <div class="flex-row"></div>
+      <footer class="flex-row">
+        <div class="flex-row">
+          <div
+            class="branch flex-row"
+            onclick="goTo('https://github.com/maddox05/maddox05.github.io')"
+          >
+            <img
+              src="assets/img/source-branch.svg"
+              alt="GitHub Branch Icon"
+              class="small-icon"
+            />
+            <h5>main*</h5>
+          </div>
+          <div class="warning-error flex-row">
+            <i class="bi bi-x-circle"></i>
+            <h5>0</h5>
+            <i class="bi bi-exclamation-triangle"></i>
+            <h5 class="right-h5">0</h5>
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="bell">
+            <i class="bi bi-bell small-icon"></i>
+          </div>
+        </div>
       </footer>
     </body>
   </html>
