@@ -104,7 +104,7 @@ header input:hover {
 .yellow,
 .green {
   cursor: pointer;
-  transition: color 0.1s ease-out;
+  transition: color 0.1s cubic-bezier(0, 0, 0, 1);
   font-size: 12px;
   height: 13px;
   margin-top: 2px;
@@ -315,10 +315,55 @@ footer .bi:hover {
 
 .bell {
   cursor: pointer;
-  margin: 0;
-  padding: 0;
+  margin-left: 5px;
 }
 
 .bell:hover {
   background-color: #1c2433;
+}
+
+.bell .bi {
+  width: 14px;
+}
+
+.bell i {
+  pointer-events: none;
+}
+
+.github {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.github:hover {
+  background-color: #1c2433;
+}
+
+.github i {
+  pointer-events: none;
+}
+
+.linkedin {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.linkedin:hover {
+  background-color: #1c2433;
+}
+
+.linkedin i {
+  pointer-events: none;
+}
+
+.youtube {
+  cursor: pointer;
+}
+
+.youtube:hover {
+  background-color: #1c2433;
+}
+
+.youtube i {
+  pointer-events: none;
 }
