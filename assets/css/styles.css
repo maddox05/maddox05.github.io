@@ -418,13 +418,3 @@ main {
   width: calc(100vw - 302px);
   height: calc(100vh - 95px);
 }
-
-.iframe h1 {
-  margin: 2.5rem;
-  font-size: 2rem;
-  color: #ebeef4;
-}
-
-body.iframe {
-  font-family: "Montserrat", sans-serif;
-}
