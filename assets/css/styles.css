@@ -367,3 +367,38 @@ footer .bi:hover {
 .youtube i {
   pointer-events: none;
 }
+
+/*~ Tabs */
+.tabs {
+  position: absolute;
+  top: 38px;
+  left: calc(52px + 250px);
+}
+
+.tab {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #171c28;
+  min-width: 100px;
+}
+
+.tab:hover {
+  background-color: #2e3b54;
+}
+
+.tab h5 {
+  color: #7f8696;
+  font-size: 0.8rem;
+  margin-left: 4px;
+}
+
+.tab.selected {
+  background-color: #1c2433;
+  border-bottom: 1px solid #ffcc66;
+}
+
+.tab.selected h5 {
+  color: #d7dce2;
+}
