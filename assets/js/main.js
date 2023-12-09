@@ -1,17 +1,13 @@
+function goTo(link) {
+  window.location.href = link;
+}
+
 function rotateArrow() {
   const arrowDown = document.getElementById("arrowDown");
   const files = document.getElementById("files");
-  if (arrowDown.classList.contains("right")) {
-    arrowDown.style.transform = "rotate(0deg)";
-    arrowDown.classList.toggle("right");
-    files.style.display = "block";
-  } else {
-    arrowDown.style.transform = "rotate(-90deg)";
-    arrowDown.classList.toggle("right");
-    files.style.display = "none";
-  }
-}
+  const isRight = arrowDown.classList.contains("right");
 
-function goTo(link) {
-  window.location.href = link;
+  arrowDown.style.transform = isRight ? "rotate(0deg)" : "rotate(-90deg)";
+  arrowDown.classList.toggle("right");
+  files.style.display = isRight ? "block" : "none";
 }
