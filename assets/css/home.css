@@ -126,6 +126,14 @@ h2 {
   transition: all 0.25s cubic-bezier(0, 0, 0, 1);
 }
 
+.bubble.python:hover {
+  background-color: rgba(254, 208, 78, 0.2);
+}
+
+.bubble.html:hover {
+  background-color: rgba(243, 101, 40, 0.2);
+}
+
 .python:hover {
   border-color: #fed04e;
 }
