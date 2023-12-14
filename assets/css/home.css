@@ -1,32 +1,139 @@
 body {
   margin-left: 2.5rem;
+  overflow: hidden;
 }
 
-.flex-row {
+.flex-center {
   display: flex;
-  flex-direction: row;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .center-vertical {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 h1 {
-  margin-top: 22.5%;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-top: 10px;
 }
 
 .round {
   border-radius: 50%;
 }
 
-.pfp {
+.pfp,
+.pfp2,
+.pfp3 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(200%, -50%);
+  bottom: -5%;
+  transform: scale(5);
+  opacity: 0.5;
+  z-index: -2;
+  -webkit-filter: blur(7px);
+  filter: blur(7px);
+}
+
+.pfp2 {
+  transform: scale(6);
+  opacity: 0.2;
+  -webkit-filter: blur(15px);
+  filter: blur(15px);
+  z-index: -3;
+}
+
+.pfp3 {
+  transform: scale(2.5);
+  opacity: 1;
+  -webkit-filter: blur(3.33px);
+  filter: blur(3.33px);
+  -webkit-box-shadow: 0px 0px 110px -24px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 110px -24px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 110px -24px rgba(0, 0, 0, 1);
+  z-index: -1;
+}
+
+.card {
+  margin-top: 10%;
+  width: 500px;
+  height: 250px;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: inherit;
+  height: inherit;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: scale(1.01) rotate(0.25deg);
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(#4ebeff, #0056f5);
+  border-radius: 50%;
+  position: absolute;
+  animation: move-up6 2s ease-in-out infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+  top: -25px;
+  left: -25px;
+}
+
+.circle:nth-child(2) {
+  bottom: -25px;
+  right: -25px;
+  animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(10px);
+  }
+}
+
+.bubble {
+  border: 1px solid #fff;
+  border-radius: 5rem;
+  max-width: fit-content;
+  max-height: 26px;
+  padding: 5px 14px;
+  padding-left: 5px;
+  margin: 7px;
+  transition: all 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.python:hover {
+  border-color: #3771a2;
+}
+
+.html:hover {
+  border-color: #f36528;
+}
+
+.language-icon {
+  height: 26px;
+  width: 26px;
+  margin-right: 5px;
 }
