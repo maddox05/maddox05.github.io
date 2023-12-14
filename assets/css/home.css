@@ -130,16 +130,52 @@ h2 {
   background-color: rgba(254, 208, 78, 0.2);
 }
 
-.bubble.html:hover {
-  background-color: rgba(243, 101, 40, 0.2);
+.bubble.javascript:hover {
+  background-color: rgba(239, 220, 80, 0.2);
+}
+
+.bubble.java:hover {
+  background-color: rgba(234, 45, 48, 0.2);
+}
+
+.bubble.c:hover {
+  background-color: rgba(3, 89, 156, 0.2);
+}
+
+.bubble.lua:hover {
+  background-color: rgba(1, 0, 128, 0.2);
+}
+
+.bubbles {
+  max-width: 333px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .python:hover {
   border-color: #fed04e;
 }
 
-.html:hover {
-  border-color: #f36528;
+.javascript:hover {
+  border-color: #efdc50;
+}
+
+.java:hover {
+  border-color: #ea2d30;
+}
+
+.c {
+  padding-right: 0px;
+}
+
+.c:hover {
+  border-color: #03599c;
+}
+
+.lua:hover {
+  border-color: #010080;
 }
 
 .language-icon {
