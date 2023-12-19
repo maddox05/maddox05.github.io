@@ -50,9 +50,11 @@ h2 {
   margin-top: 10%;
   width: 500px;
   height: 250px;
-  transition: all 0.2s;
+  transition: transform 0.25s cubic-bezier(0, 0, 0, 1),
+    background-color 0.25s cubic-bezier(0, 0, 0, 1);
   position: relative;
   cursor: pointer;
+  border-radius: 15px;
 }
 
 .card-inner {
@@ -66,7 +68,7 @@ h2 {
 }
 
 .card:hover {
-  transform: scale(1.01) rotate(0.25deg);
+  transform: scale(1.02) rotate(0.25deg);
   background-color: rgba(255, 255, 255, 0.25);
   border-radius: 15px;
 }
@@ -111,7 +113,8 @@ h2 {
   padding: 5px 14px;
   padding-left: 5px;
   margin: 7px;
-  transition: all 0.25s cubic-bezier(0, 0, 0, 1);
+  transition: background-color 0.25s cubic-bezier(0, 0, 0, 1),
+    border-color 0.25s cubic-bezier(0, 0, 0, 1);
 }
 
 .bubble.python:hover {
