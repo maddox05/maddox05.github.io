@@ -24,8 +24,6 @@ function changeSource(page) {
     page.split(".html")[0].charAt(0).toUpperCase() +
     page.split(".html")[0].slice(1);
 
-  const tabList = ["home", "about", "github", "projects", "contact", "404"];
-
   Array.from(tabs).forEach((tab) => {
     if (tab.id === `tab${name}`) {
       tab.classList.add("selected");
