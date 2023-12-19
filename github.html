@@ -9,10 +9,175 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/font.css" />
     <link rel="stylesheet" href="assets/css/github.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/github.js"></script>
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
   </head>
   <body class="iframe">
-    <h1>GitHub Page</h1>
+    <div
+      class="header center-horizontal"
+      onclick="goTo('https://github.com/maddox05')"
+    >
+      <div class="flex-row center-horizontal">
+        <img
+          src="https://avatars.githubusercontent.com/u/95244098"
+          alt="GitHub Profile Picture"
+          class="github-pfp"
+        />
+        <h4>maddox05</h4>
+      </div>
+      <div>
+        <h4 id="repos">17 repositories</h4>
+      </div>
+      <div>
+        <h4 id="followers">22 followers</h4>
+      </div>
+    </div>
+    <h3>Most popular repositories</h3>
+    <div class="popular-repos">
+      <div
+        class="repo"
+        onclick="goTo('https://github.com/duckmath/duckmath.github.io')"
+      >
+        <h5>duckmath.github.io</h5>
+        <small>An amazing website to learn and have fun!</small>
+        <div class="flex-row icons">
+          <div class="flex-row">
+            <i class="ti ti-star flex-center"></i>
+            <h5 class="stars">7</h5>
+          </div>
+          <div class="flex-row">
+            <i class="ti ti-git-fork flex-center"></i>
+            <h5 class="forks">14</h5>
+          </div>
+        </div>
+      </div>
+      <div
+        class="repo"
+        onclick="goTo('https://github.com/maddox05/Auto-Clicker')"
+      >
+        <h5>Auto-Clicker</h5>
+        <small>Windows Auto Clicker, made with tkinter.</small>
+        <div class="flex-row icons">
+          <div class="flex-row">
+            <i class="ti ti-star flex-center"></i>
+            <h5 class="stars">3</h5>
+          </div>
+          <div class="flex-row">
+            <i class="ti ti-git-fork flex-center"></i>
+            <h5 class="forks">2</h5>
+          </div>
+        </div>
+      </div>
+      <div
+        class="repo"
+        onclick="goTo('https://github.com/maddox05/Comment-Game-Controller')"
+      >
+        <h5>Comment-Game-Controller</h5>
+        <small>Plays games from user inputted live stream comments!</small>
+        <div class="flex-row icons">
+          <div class="flex-row">
+            <i class="ti ti-star flex-center"></i>
+            <h5 class="stars">11</h5>
+          </div>
+          <div class="flex-row">
+            <i class="ti ti-git-fork flex-center"></i>
+            <h5 class="forks">3</h5>
+          </div>
+        </div>
+      </div>
+      <div
+        class="repo"
+        onclick="goTo('https://github.com/maddox05/ruffle-example')"
+      >
+        <h5>ruffle-example</h5>
+        <small
+          >This is an example of how to implement ruffle in your own
+          website.</small
+        >
+        <div class="flex-row icons">
+          <div class="flex-row">
+            <i class="ti ti-star flex-center"></i>
+            <h5 class="stars">2</h5>
+          </div>
+          <div class="flex-row">
+            <i class="ti ti-git-fork flex-center"></i>
+            <h5 class="forks">4</h5>
+          </div>
+        </div>
+      </div>
+      <div class="repo" onclick="goTo('https://github.com/maddox05/wpm-game')">
+        <h5>wpm-game</h5>
+        <small>Words Per Minute typing speed test, like Monkeytype.</small>
+        <div class="flex-row icons">
+          <div class="flex-row">
+            <i class="ti ti-star flex-center"></i>
+            <h5 class="stars">3</h5>
+          </div>
+          <div class="flex-row">
+            <i class="ti ti-git-fork flex-center"></i>
+            <h5 class="forks">3</h5>
+          </div>
+        </div>
+      </div>
+      <div class="repo" onclick="goTo('https://github.com/maddox05/chat-app')">
+        <h5>chat-app</h5>
+        <small
+          >A chat app made using vanilla JavaScript with Firebase as a
+          backend.</small
+        >
+        <div class="flex-row icons">
+          <div class="flex-row">
+            <i class="ti ti-star flex-center"></i>
+            <h5 class="stars">3</h5>
+          </div>
+          <div class="flex-row">
+            <i class="ti ti-git-fork flex-center"></i>
+            <h5 class="forks">3</h5>
+          </div>
+        </div>
+      </div>
+      <div
+        class="repo"
+        onclick="goTo('https://github.com/maddox05/link-minifier')"
+      >
+        <h5>link-minifier</h5>
+        <small
+          >link minifier that takes any valid link and creates a shorter
+          link</small
+        >
+        <div class="flex-row icons">
+          <div class="flex-row">
+            <i class="ti ti-star flex-center"></i>
+            <h5 class="stars">1</h5>
+          </div>
+          <div class="flex-row">
+            <i class="ti ti-git-fork flex-center"></i>
+            <h5 class="forks">4</h5>
+          </div>
+        </div>
+      </div>
+      <div
+        class="repo"
+        onclick="goTo('https://github.com/maddox05/image-editor-lite')"
+      >
+        <h5>image-editor-lite</h5>
+        <small>edits format and size of image</small>
+        <div class="flex-row icons">
+          <div class="flex-row">
+            <i class="ti ti-git-fork flex-center"></i>
+            <h5 class="forks">1</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--todo I actually don't know how to add the GitHub calendar, it seems a bit hard -->
+    <!--todo <h3>GitHub Calendar</h3> -->
   </body>
 </html>
