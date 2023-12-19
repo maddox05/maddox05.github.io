@@ -24,6 +24,18 @@ body {
   flex-direction: column;
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /*~ Header */
 header {
   background-color: #171c28;
