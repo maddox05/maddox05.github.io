@@ -12,9 +12,11 @@ Welcome to the completed webpage showcasing my portfolio with a sleek design and
 
 - Experience the webpage by visiting the [live temporary preview](https://lightandy1.github.io/maddox05.github.io/).
 
-### [Visit the Live Page](https://maddox.page)
+### Visit the Page (files not uploaded yet)
 
 - Explore the fully functional and visually stunning webpage live at [maddox.page](https://maddox.page) (official link/domain).
+
+---
 
 #### Sidebar and Explorer:
 
@@ -59,8 +61,6 @@ Welcome to the completed webpage showcasing my portfolio with a sleek design and
 
 - .yml style contact page with clickable social links (Email, LinkedIn, GitHub).
 - Additional links can be added upon request.
-
----
 
 ## Credits
 
