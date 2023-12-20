@@ -49,7 +49,7 @@ div .project:active {
 
 .category.html:hover {
   background-color: rgba(228, 77, 37, 0.25);
-  color: rgba(228, 77, 37, 1);
+  color: #e44d25;
 }
 
 .category.css {
@@ -58,7 +58,7 @@ div .project:active {
 
 .category.css:hover {
   background-color: rgba(66, 165, 245, 0.25);
-  color: rgba(66, 165, 245, 1);
+  color: #42a5f5;
 }
 
 .category.js {
@@ -67,16 +67,16 @@ div .project:active {
 
 .category.js:hover {
   background-color: rgba(255, 202, 39, 0.25);
-  color: rgba(255, 202, 39, 1);
+  color: #ffca27;
 }
 
 .category.python {
-  border-color: #fdd836;
+  border-color: #4da6f1;
 }
 
 .category.python:hover {
-  background-color: rgba(253, 216, 54, 0.25);
-  color: rgba(253, 216, 54, 1);
+  background-color: rgba(77, 166, 241, 0.25);
+  color: #4da6f1;
 }
 
 .category.website {
@@ -107,10 +107,38 @@ div .project:active {
 }
 
 .category.java {
-  border-color: #ea2c2e;
+  border-color: #fca323;
 }
 
 .category.java:hover {
-  background-color: rgba(234, 44, 46, 0.25);
-  color: rgba(234, 44, 46, 1);
+  background-color: rgba(252, 163, 35, 0.25);
+  color: rgba(252, 163, 35, 1);
+}
+
+.category.c {
+  border-color: #a1a1a1;
+  padding: 2px 8px;
+}
+
+.category.c:hover {
+  background-color: rgba(161, 161, 161, 0.25);
+  color: #a1a1a1;
+}
+
+.category.game {
+  border-color: #befd02;
+}
+
+.category.game:hover {
+  background-color: rgba(190, 253, 2, 0.25);
+  color: #befd02;
+}
+
+.category.codeforces {
+  border-color: #ffc925;
+}
+
+.category.codeforces:hover {
+  background-color: rgba(255, 201, 37, 0.25);
+  color: #ffc925;
 }
