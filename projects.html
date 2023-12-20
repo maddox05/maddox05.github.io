@@ -9,10 +9,73 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/font.css" />
     <link rel="stylesheet" href="assets/css/projects.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
 
     <script src="assets/js/main.js"></script>
   </head>
   <body class="iframe">
-    <h1>Projects Page</h1>
+    <h3 class="flex-center">My Open Source Projects</h3>
+    <div class="projects">
+      <div
+        class="project"
+        onclick="goTo('https://github.com/duckmath/duckmath.github.io')"
+      >
+        <h5>Duckmath</h5>
+        <small>An amazing website to learn and have fun!</small>
+        <div class="categories flex-row">
+          <div class="category html">HTML</div>
+          <div class="category css">CSS</div>
+          <div class="category js">JS</div>
+          <div class="category website">Website</div>
+        </div>
+      </div>
+      <div
+        class="project"
+        onclick="goTo('https://github.com/maddox05/leetcode')"
+      >
+        <h5>LeetCode problems</h5>
+        <small>A collection of LeetCode problems</small>
+        <div class="categories flex-row">
+          <div class="category python">Python</div>
+          <div class="category leetcode">LeetCode</div>
+        </div>
+      </div>
+      <div
+        class="project"
+        onclick="goTo('https://github.com/maddox05/image-editor-lite')"
+      >
+        <h5>Image Editor - Lite</h5>
+        <small>Edits format and size of image</small>
+        <div class="categories flex-row">
+          <div class="category python">Python</div>
+          <div class="category tool">Tool</div>
+        </div>
+      </div>
+      <div
+        class="project"
+        onclick="goTo('https://github.com/maddox05/Fahrenheit-to-Celsius-Calculator')"
+      >
+        <h5>F to C Calculator</h5>
+        <small>A tool to convert Fahrenheit to Celsius</small>
+        <div class="categories flex-row">
+          <div class="category python">Python</div>
+          <div class="category tool">Tool</div>
+        </div>
+      </div>
+      <div
+        class="project"
+        onclick="goTo('https://github.com/duckmath/duckmath.github.io')"
+      >
+        <h5>Number Guesser</h5>
+        <small>A Java program who guesses a number</small>
+        <div class="categories flex-row">
+          <div class="category java">Java</div>
+          <div class="category tool">Tool</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
