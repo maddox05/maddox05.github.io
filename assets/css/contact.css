@@ -1,0 +1,40 @@
+body {
+  margin: 50px;
+  margin-top: 25px;
+  overflow: hidden;
+  color: #ebeef4;
+}
+
+h3 {
+  margin-bottom: 33px;
+}
+
+h5 {
+  cursor: default;
+}
+
+h5.line {
+  margin-bottom: 7px;
+}
+
+span.line {
+  margin-right: 15px;
+  color: #3f495f;
+}
+
+.tab1 {
+  margin-left: 20px;
+}
+
+.tab2 {
+  margin-left: 40px;
+}
+
+.clickable {
+  cursor: pointer;
+  color: #cc4e54;
+}
+
+.clickable:hover {
+  text-decoration: underline;
+}
