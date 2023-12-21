@@ -1,6 +1,29 @@
-<div class="container">
-  <h1>404</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+    <title>404 - Not Found</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/font.css" />
+    <link rel="stylesheet" href="assets/css/404.css" />
+  </head>
+  <body>
+    <div class="flex-center flex-col">
+      <h1>404 - Not Found</h1>
+      <p>
+        Sorry, the page you are looking for might be removed or temporarily
+        unavailable.
+      </p>
+      <h5><a href="/">Go back to the home page</a></h5>
+    </div>
+
+    <script>
+      setTimeout(function () {
+        window.location.href = "/";
+      }, 10000);
+    </script>
+  </body>
+</html>
