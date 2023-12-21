@@ -81,3 +81,109 @@ div.icons h5 {
 .forks {
   margin-left: 3px;
 }
+
+/* Images */
+
+div .repo:nth-child(1) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(23, 28, 40, 1),
+      rgba(23, 28, 40, 0.75),
+      rgba(23, 28, 40, 0)
+    ),
+    url("../img/github/duckmath.webp");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+div .repo:nth-child(2) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(23, 28, 40, 1),
+      rgba(23, 28, 40, 0.75),
+      rgba(23, 28, 40, 0)
+    ),
+    url("../img/github/auto-clicker.webp");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+div .repo:nth-child(3) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(23, 28, 40, 1),
+      rgba(23, 28, 40, 0.75),
+      rgba(23, 28, 40, 0)
+    ),
+    url("../img/github/game-controller.gif");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+div .repo:nth-child(4) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(23, 28, 40, 1),
+      rgba(23, 28, 40, 0.75),
+      rgba(23, 28, 40, 0)
+    ),
+    url("../img/github/ruffle.webp");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+div .repo:nth-child(5) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(23, 28, 40, 1),
+      rgba(23, 28, 40, 0.75),
+      rgba(23, 28, 40, 0)
+    ),
+    url("../img/github/wpm-game.webp");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+div .repo:nth-child(6) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(23, 28, 40, 1),
+      rgba(23, 28, 40, 0.75),
+      rgba(23, 28, 40, 0)
+    ),
+    url("../img/github/chat-app.webp");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+div .repo:nth-child(7) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(23, 28, 40, 1),
+      rgba(23, 28, 40, 0.75),
+      rgba(23, 28, 40, 0)
+    ),
+    url("../img/github/link-minifier.webp");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+div .repo:nth-child(8) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(23, 28, 40, 1),
+      rgba(23, 28, 40, 0.75),
+      rgba(23, 28, 40, 0)
+    ),
+    url("../img/github/image-editor.webp");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
