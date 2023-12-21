@@ -10,7 +10,7 @@ Welcome to the completed webpage showcasing my portfolio with a sleek design and
 
 ### Temporary Preview:
 
-- Experience the webpage by visiting the [live temporary preview](https://lightandy1.github.io/maddox05.github.io/).
+- Experience the webpage by visiting the [maddox.page](https://maddox.page).
 
 ### Visit the Page (files not uploaded yet)
 
