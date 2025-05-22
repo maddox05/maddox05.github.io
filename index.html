@@ -1,309 +1,667 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!--~ Meta Tags -->
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="Maddox Schmidlkofer's Personal Site" />
-    <meta
-      name="description"
-      content="Explore Maddox Schmidlkofer's developer portfolio: coding projects, programming skills, and personal info, all in a unique Visual Studio Code-inspired design."
-    />
-    <meta
-      name="keywords"
-      content="Maddox Schmidlkofer, developer, portfolio, coding projects, programming, web development, VSCode, personal website"
-    />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="English" />
-    <meta name="author" content="Maddox Schmidlkofer" />
-    <link rel="canonical" href="https://maddox05.github.io/" />
-    <meta name="theme-color" content="#1e1e1e" />
-    <link rel="icon" type="image/webp" href="assets/img/favicon.webp" />
-    <title>Maddox Schmidlkofer's Personal Site</title>
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://maddox.page/" />
-    <meta property="og:title" content="Maddox Schmidlkofer's Personal Site" />
-    <meta
-      property="og:description"
-      content="Explore Maddox Schmidlkofer's developer portfolio: coding projects, programming skills, and personal info, all in a unique Visual Studio Code-inspired design."
-    />
-    <meta property="og:image" content="assets/img/og-image.webp" />
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://maddox05.github.io/" />
-    <meta name="twitter:title" content="Maddox Schmidlkofer's Personal Site" />
-    <meta
-      name="twitter:description"
-      content="Explore Maddox Schmidlkofer's developer portfolio: coding projects, programming skills, and personal info, all in a unique Visual Studio Code-inspired design."
-    />
-    <meta name="twitter:image" content="/as" />
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Maddox Schmidlkofer",
-        "url": "https://maddox05.github.io/",
-        "image": "https://maddox05.github.io/assets/img/favicon.webp",
-        "sameAs": [
-          "https://github.com/maddox05",
-          "https://www.linkedin.com/in/maddox-schmidlkofer/",
-          "https://www.youtube.com/@magicmaddox"
-        ],
-        "jobTitle": "Developer",
-        "description": "Developer portfolio showcasing coding projects, programming skills, and personal information in a VSCode-inspired format."
+    <link rel="icon" type="image/png" href="assets/img/mtb_icon.png" />
+    <title>Maddox's Site</title>
+    <style>
+      /* Neo-brutalist style */
+      :root {
+        --primary: #ffcc66;
+        --secondary: #171c28;
+        --tertiary: #fc5753;
+        --accent: #32c747;
+        --bg: #f5f5f5;
+        --text: #1c2433;
       }
-    </script>
-    <!--* Stylesheets -->
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
-    />
-    <!--^ JS -->
-    <script src="assets/js/main.js"></script>
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Courier New", monospace;
+        background-color: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: repeating-linear-gradient(
+          45deg,
+          rgba(0, 0, 0, 0.05),
+          rgba(0, 0, 0, 0.05) 10px,
+          transparent 10px,
+          transparent 20px
+        );
+        z-index: -1;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      header {
+        margin-bottom: 2rem;
+        border-bottom: 5px solid var(--text);
+        padding-bottom: 1rem;
+        position: relative;
+      }
+
+      .glitch-effect {
+        position: relative;
+        display: inline-block;
+      }
+
+      .glitch-effect::before,
+      .glitch-effect::after {
+        content: "MADDOX SCHMIDLKOFER";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .glitch-effect::before {
+        left: 2px;
+        text-shadow: -2px 0 var(--tertiary);
+        clip: rect(24px, 550px, 90px, 0);
+        animation: glitch-anim-1 3s infinite linear alternate-reverse;
+      }
+
+      .glitch-effect::after {
+        left: -2px;
+        text-shadow: 2px 0 var(--accent);
+        clip: rect(85px, 550px, 140px, 0);
+        animation: glitch-anim-2 2.5s infinite linear alternate-reverse;
+      }
+
+      @keyframes glitch-anim-1 {
+        0% {
+          clip: rect(12px, 9999px, 95px, 0);
+        }
+        20% {
+          clip: rect(51px, 9999px, 40px, 0);
+        }
+        40% {
+          clip: rect(23px, 9999px, 70px, 0);
+        }
+        60% {
+          clip: rect(83px, 9999px, 23px, 0);
+        }
+        80% {
+          clip: rect(99px, 9999px, 12px, 0);
+        }
+        100% {
+          clip: rect(27px, 9999px, 40px, 0);
+        }
+      }
+
+      @keyframes glitch-anim-2 {
+        0% {
+          clip: rect(2px, 9999px, 25px, 0);
+        }
+        20% {
+          clip: rect(71px, 9999px, 80px, 0);
+        }
+        40% {
+          clip: rect(43px, 9999px, 30px, 0);
+        }
+        60% {
+          clip: rect(63px, 9999px, 43px, 0);
+        }
+        80% {
+          clip: rect(10px, 9999px, 92px, 0);
+        }
+        100% {
+          clip: rect(57px, 9999px, 60px, 0);
+        }
+      }
+
+      h1 {
+        font-size: 4rem;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+        line-height: 0.9;
+        color: var(--text);
+        font-weight: 900;
+        position: relative;
+        display: inline-block;
+      }
+
+      h1::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 10px;
+        background-color: var(--primary);
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      h2 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        border-left: 10px solid var(--tertiary);
+        padding-left: 1rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+
+      .card {
+        background-color: white;
+        border: 4px solid var(--text);
+        padding: 1.5rem;
+        box-shadow: 10px 10px 0 var(--text);
+        transition: all 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translate(-5px, -5px);
+        box-shadow: 15px 15px 0 var(--text);
+      }
+
+      .card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        border-bottom: 4px solid var(--primary);
+        display: inline-block;
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .skill {
+        background-color: var(--secondary);
+        color: white;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        border: 2px solid var(--text);
+      }
+
+      .project {
+        margin-bottom: 1rem;
+      }
+
+      .project h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .project a {
+        color: var(--tertiary);
+        text-decoration: none;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+      }
+
+      .project a::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: var(--tertiary);
+        bottom: 0;
+        left: 0;
+      }
+
+      .link-section {
+        margin-top: 3rem;
+        padding: 1rem;
+        background-color: var(--primary);
+        border: 4px solid var(--text);
+        box-shadow: 10px 10px 0 var(--text);
+      }
+
+      .link-section h3 {
+        margin-bottom: 1rem;
+        border-bottom: 4px solid var(--text);
+        display: inline-block;
+      }
+
+      .links {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .links a {
+        background-color: var(--secondary);
+        color: white;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 2px solid var(--text);
+        transition: all 0.2s ease;
+      }
+
+      .links a:hover {
+        background-color: var(--text);
+        transform: translate(-2px, -2px);
+        box-shadow: 4px 4px 0 var(--tertiary);
+      }
+
+      .profile-pic {
+        width: 100%;
+        border: 5px solid var(--text);
+        margin-bottom: 1rem;
+      }
+
+      .about-section {
+        padding: 2rem;
+        background-color: white;
+        border: 4px solid var(--text);
+        box-shadow: 10px 10px 0 var(--text);
+        margin-bottom: 2rem;
+      }
+
+      /* Neo-brutalist stamp elements */
+      .stamp {
+        position: absolute;
+        font-weight: bold;
+        text-transform: uppercase;
+        transform: rotate(-12deg);
+        color: white;
+        font-size: 16px;
+        padding: 10px 15px;
+        border: 3px solid var(--text);
+        box-shadow: 3px 3px 0 var(--text);
+        z-index: 10;
+      }
+
+      .stamp.red {
+        background-color: var(--tertiary);
+        top: 50px;
+        right: 80px;
+      }
+
+      .stamp.yellow {
+        background-color: var(--primary);
+        color: var(--text);
+        top: 300px;
+        left: 60px;
+      }
+
+      .stamp.green {
+        background-color: var(--accent);
+        bottom: 100px;
+        right: 40px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        h1 {
+          font-size: 3rem;
+        }
+
+        .stamp {
+          font-size: 12px;
+          padding: 6px 10px;
+        }
+      }
+
+      .video-container {
+        width: 100%;
+        margin: 1rem 0;
+        border: 3px solid var(--text);
+        background-color: var(--secondary);
+        position: relative;
+      }
+
+      .video-placeholder {
+        aspect-ratio: 16/9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .video-placeholder:hover {
+        background-color: var(--text);
+      }
+
+      .video-placeholder p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .play-button {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: var(--tertiary);
+        border: 3px solid var(--text);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: white;
+        box-shadow: 4px 4px 0 var(--text);
+        transition: all 0.2s ease;
+      }
+
+      .video-placeholder:hover .play-button {
+        transform: scale(1.1);
+        box-shadow: 6px 6px 0 var(--text);
+      }
+
+      .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+
+      .photo-card {
+        position: relative;
+        border: 6px solid var(--text);
+        background-color: var(--secondary);
+        box-shadow: 12px 12px 0 var(--text);
+        transition: all 0.3s ease;
+        overflow: hidden;
+      }
+
+      .photo-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .photo-card.large {
+        grid-column: span 2;
+        aspect-ratio: 16/9;
+      }
+
+      .photo-card.medium {
+        aspect-ratio: 4/3;
+      }
+
+      .photo-card:hover {
+        transform: translate(-8px, -8px);
+        box-shadow: 20px 20px 0 var(--text);
+      }
+
+      .photo-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 2rem;
+        text-align: center;
+        padding: 2rem;
+        background: repeating-linear-gradient(
+          45deg,
+          var(--secondary),
+          var(--secondary) 20px,
+          var(--text) 20px,
+          var(--text) 40px
+        );
+        position: relative;
+      }
+
+      .photo-placeholder::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          45deg,
+          transparent 0%,
+          rgba(0, 0, 0, 0.2) 50%,
+          transparent 100%
+        );
+        animation: shine 3s infinite;
+      }
+
+      @keyframes shine {
+        0% {
+          transform: translateX(-100%) rotate(45deg);
+        }
+        100% {
+          transform: translateX(100%) rotate(45deg);
+        }
+      }
+
+      .photo-label {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        background-color: var(--tertiary);
+        color: white;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 3px solid var(--text);
+        box-shadow: 4px 4px 0 var(--text);
+        z-index: 2;
+      }
+
+      .photo-grid::before {
+        content: "PHOTO GALLERY";
+        position: absolute;
+        top: -2rem;
+        left: 50%;
+        transform: translateX(-50%) rotate(-2deg);
+        background-color: var(--primary);
+        color: var(--text);
+        padding: 0.5rem 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 4px solid var(--text);
+        box-shadow: 6px 6px 0 var(--text);
+        z-index: 3;
+      }
+    </style>
   </head>
   <body>
-    <header class="flex-row">
-      <div class="flex-row">
-        <img
-          src="assets/img/favicon.webp"
-          alt="Visual Studio Code Icon"
-          class="small-icon"
-        />
-        <button type="button">File</button>
-        <button type="button">Edit</button>
-        <button type="button">Selection</button>
-        <button type="button">View</button>
-        <button type="button">Go</button>
-        <button type="button">Run</button>
-        <button type="button">Terminal</button>
-        <button type="button">Help</button>
-      </div>
-      <div class="flex-row">
-        <i class="bi bi-arrow-left-short"></i>
-        <i class="bi bi-arrow-right-short disabled"></i>
-        <div class="group">
-          <i class="bi bi-search disabled"></i>
-          <input type="search" placeholder="maddox05.github.io" disabled />
-        </div>
-      </div>
-      <div class="flex-row">
-        <i class="bi bi-circle-fill red"></i>
-        <i class="bi bi-circle-fill yellow"></i>
-        <i class="bi bi-circle-fill green"></i>
-      </div>
-    </header>
-    <div class="flex-row">
-      <div class="sidebar flex-col">
-        <div class="flex-col">
-          <i class="bi bi-files" onclick="changeSource('home.html')"></i>
-          <i class="bi bi-github" onclick="changeSource('github.html')"></i>
-          <i
-            class="bi bi-file-earmark-code"
-            onclick="changeSource('projects.html')"
-          ></i>
-          <i class="bi bi-envelope" onclick="changeSource('contact.html')"></i>
-        </div>
-        <div class="bottom flex-col">
-          <i
-            class="bi bi-person-circle"
-            onclick="changeSource('about.html')"
-          ></i>
-          <i class="bi bi-gear"></i>
-        </div>
-      </div>
-      <div class="explorer">
-        <h3>EXPLORER</h3>
-        <div class="flex-row center category" onclick="rotateArrow()">
-          <i class="bi bi-chevron-down" id="arrowDown"></i>
-          <h4>MADDOX05.GITHUB.IO</h4>
-        </div>
-        <div id="files" class="flex-col">
-          <div
-            id="pageHome"
-            class="page-button flex-row selected"
-            onclick="changeSource('home.html')"
-          >
-            <img
-              src="assets/img/language-javascript.svg"
-              alt="JavaScript Icon"
-              class="small-icon"
-            />
-            <h5>home.js</h5>
-          </div>
-          <div
-            id="pageAbout"
-            class="page-button flex-row"
-            onclick="changeSource('about.html')"
-          >
-            <img
-              src="assets/img/language-html5.svg"
-              alt="HTML5 Icon"
-              class="small-icon"
-            />
-            <h5>about.html</h5>
-          </div>
-          <div
-            id="pageGithub"
-            class="page-button flex-row"
-            onclick="changeSource('github.html')"
-          >
-            <img
-              src="assets/img/language-markdown.svg"
-              alt="Markdown Icon"
-              class="small-icon"
-            />
-            <h5>github.md</h5>
-          </div>
-          <div
-            id="pageProjects"
-            class="page-button flex-row"
-            onclick="changeSource('projects.html')"
-          >
-            <img
-              src="assets/img/language-python.svg"
-              alt="Python Icon"
-              class="small-icon"
-            />
-            <h5>projects.py</h5>
-          </div>
-          <div
-            id="pageContact"
-            class="page-button flex-row"
-            onclick="changeSource('contact.html')"
-          >
-            <img
-              src="assets/img/language-yml.svg"
-              alt="YAML Icon"
-              class="small-icon"
-            />
-            <h5>contact.yml</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="tabs" class="tabs flex-row">
-      <div
-        id="tabHome"
-        class="tab flex-row selected"
-        onclick="changeSource('home.html')"
-      >
-        <img
-          src="assets/img/language-javascript.svg"
-          alt="JavaScript Icon"
-          class="small-icon"
-        />
-        <h5>home.js</h5>
-      </div>
-      <div
-        id="tabAbout"
-        class="tab flex-row"
-        onclick="changeSource('about.html')"
-      >
-        <img
-          src="assets/img/language-html5.svg"
-          alt="HTML5 Icon"
-          class="small-icon"
-        />
-        <h5>about.html</h5>
-      </div>
-      <div
-        id="tabGithub"
-        class="tab flex-row"
-        onclick="changeSource('github.html')"
-      >
-        <img
-          src="assets/img/language-markdown.svg"
-          alt="Markdown Icon"
-          class="small-icon"
-        />
-        <h5>github.md</h5>
-      </div>
-      <div
-        id="tabProjects"
-        class="tab flex-row"
-        onclick="changeSource('projects.html')"
-      >
-        <img
-          src="assets/img/language-python.svg"
-          alt="Python Icon"
-          class="small-icon"
-        />
-        <h5>projects.py</h5>
-      </div>
-      <div
-        id="tabContact"
-        class="tab flex-row"
-        onclick="changeSource('contact.html')"
-      >
-        <img
-          src="assets/img/language-yml.svg"
-          alt="YAML Icon"
-          class="small-icon"
-        />
-        <h5>contact.yml</h5>
-      </div>
-    </div>
-    <main style="overflow: hidden">
-      <iframe
-        src="./home.html"
-        width="100%"
-        height="100%"
-        frameborder="0"
-        title="Home Page"
-        style="overflow: auto"
-        scrolling="yes"
-      ></iframe>
-    </main>
-    <footer class="flex-row">
-      <div class="flex-row">
+    <div class="container">
+      <div class="stamp red">Coding Since 2019</div>
+      <div class="stamp yellow">Purdue CS</div>
+      <div class="stamp green">Open to Work</div>
+      <header>
+        <h1 class="glitch-effect">Maddox Schmidlkofer</h1>
+        <p
+          style="
+            font-weight: bold;
+            letter-spacing: 2px;
+            transform: rotate(-1deg);
+            display: inline-block;
+            background-color: var(--tertiary);
+            color: white;
+            padding: 5px 10px;
+            margin-top: 10px;
+          "
+        >
+          Coder, Entrepreneur, Explorer
+        </p>
+      </header>
+
+      <section class="about-section">
         <div
-          class="branch flex-row"
-          onclick="goTo('https://github.com/maddox05/maddox05.github.io')"
+          style="
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 1.5rem;
+          "
         >
           <img
-            src="assets/img/source-branch.svg"
-            alt="GitHub Branch Icon"
-            class="small-icon"
+            src="assets/img/profile.webp"
+            alt="Maddox Schmidlkofer"
+            class="profile-pic"
+            style="max-width: 200px"
           />
-          <h5>main*</h5>
+          <div>
+            <p>
+              Hi! I'm Maddox. I've been coding for about 5 years now and it has
+              always enticed me. I want to work on something that will benefit
+              me outside of work. That's why I'm pursuing computer science at
+              Purdue - while working you can learn things to go back and make
+              personal projects.
+            </p>
+          </div>
         </div>
-        <div class="warning-error flex-row">
-          <i class="bi bi-x-circle"></i>
-          <h5>0</h5>
-          <i class="bi bi-exclamation-triangle"></i>
-          <h5 class="right-h5">0</h5>
+        <p>
+          I've always found it fun working on personal projects, like my first
+          project, making a rust script that combatted recoil. It was so fun
+          seeing my script work, and seeing my friends use it made it even
+          better.
+        </p>
+        <p>
+          I don't want to work for someone else on something I don't care about.
+          I want to do something great. Besides coding, I enjoy mountain biking
+          and hiking with my girlfriend.
+        </p>
+      </section>
+
+      <section class="about-section" style="position: relative">
+        <div class="photo-grid">
+          <div class="photo-card large">
+            <img src="assets/img/wide_ash_ketchup.jpg" alt="Wide Ash Ketchup" />
+            <!-- <div class="photo-label">Mountain Biking</div> -->
+          </div>
+          <div class="photo-card medium">
+            <img src="assets/img/big_blue.jpg" alt="Big Blue" />
+            <!-- <div class="photo-label">Hiking</div> -->
+          </div>
+          <div class="photo-card medium">
+            <img
+              src="assets/img/clock_tower_night.jpg"
+              alt="Clock Tower at Night"
+            />
+            <!-- <div class="photo-label">Purdue</div> -->
+          </div>
+          <!-- <div class="photo-card large">
+            <img src="assets/img/duckmath.png" alt="DuckMath" />
+            <div class="photo-label">Projects</div>
+          </div>
+        </div> -->
+      </section>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Projects</h3>
+          <div class="project">
+            <h4>DuckMath</h4>
+            <div class="video-container">
+              <img
+                src="assets/img/duckmath.png"
+                alt="DuckMath Website Preview"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <p>An unblocked games site with 6M+ views and 7k ARR</p>
+            <a href="https://duckmath.org" target="_blank">Visit Site</a>
+          </div>
+          <div class="project">
+            <h4>QuackPrep</h4>
+            <div class="video-container">
+              <video
+                class="project-video"
+                controls
+                style="width: 100%; height: 100%; object-fit: cover"
+              >
+                <source
+                  src="https://quackprep.com/vid/quack.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <p>
+              Find free past exams & study material filtered by your college
+            </p>
+            <a href="https://quackprep.com" target="_blank">Visit Site</a>
+          </div>
+          <div class="project">
+            <h4>Mirrify.io</h4>
+            <div class="video-container">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/dceV3ljBcxQ"
+                title="Mirrify.io Demo"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="aspect-ratio: 16/9"
+              ></iframe>
+            </div>
+            <p>
+              Mirrify is a no-nonsense tool that downloads any site you give it.
+              HTML games, static sites, personal projects — all yours in one
+              click.
+            </p>
+            <a href="https://mirrify.io" target="_blank">Visit Site</a>
+          </div>
         </div>
       </div>
-      <div class="flex-row">
-        <div
-          class="youtube flex-row"
-          onclick="goTo('https://www.youtube.com/@magicmaddox')"
-        >
-          <i class="bi bi-youtube"></i>
-          <h5>YouTube</h5>
-        </div>
-        <div
-          class="linkedin flex-row"
-          onclick="goTo('https://www.linkedin.com/in/maddox-schmidlkofer/')"
-        >
-          <i class="bi bi-linkedin"></i>
-          <h5>LinkedIn</h5>
-        </div>
-        <div
-          class="github flex-row"
-          onclick="goTo('https://github.com/maddox05')"
-        >
-          <i class="bi bi-github"></i>
-          <h5>GitHub</h5>
-        </div>
-        <div class="bell flex-row">
-          <i class="bi bi-bell small-icon"></i>
+
+      <div class="link-section">
+        <h3>Connect With Me</h3>
+        <div class="links">
+          <a
+            href="https://www.linkedin.com/in/maddox-schmidlkofer/"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/maddox05" target="_blank">GitHub</a>
+          <a href="https://youtube.com/@magicmaddox" target="_blank">YouTube</a>
+          <a href="mailto:maddoxpublic@gmail.com">Email</a>
+          <a
+            href="https://docs.google.com/document/d/1djrpzo_zKd4e2CfLq2mEkCQrAJIeqrmD"
+            target="_blank"
+            >Resume</a
+          >
         </div>
       </div>
-    </footer>
+    </div>
   </body>
 </html>
