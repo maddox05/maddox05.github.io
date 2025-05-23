@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="assets/img/mtb_icon.png" />
     <title>Maddox's Site</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5VNZJZT1MH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-5VNZJZT1MH");
+    </script>
     <style>
       /* Neo-brutalist style */
       :root {
@@ -619,8 +633,8 @@
           <!-- <div class="photo-card large">
             <img src="assets/img/duckmath.png" alt="DuckMath" />
             <div class="photo-label">Projects</div>
-          </div>
-        </div> -->
+          </div>-->
+        </div>
       </section>
 
       <div class="grid">
@@ -636,7 +650,12 @@
               />
             </div>
             <p>An unblocked games site with 6M+ views and 7k ARR</p>
-            <a href="https://duckmath.org" target="_blank">Visit Site</a>
+            <a
+              href="https://duckmath.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Visit Site</a
+            >
           </div>
           <div class="project">
             <h4>QuackPrep</h4>
@@ -645,6 +664,7 @@
                 class="project-video"
                 controls
                 style="width: 100%; height: 100%; object-fit: cover"
+                preload="metadata"
               >
                 <source
                   src="https://quackprep.com/vid/quack.mp4"
@@ -656,7 +676,12 @@
             <p>
               Find free past exams & study material filtered by your college
             </p>
-            <a href="https://quackprep.com" target="_blank">Visit Site</a>
+            <a
+              href="https://quackprep.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Visit Site</a
+            >
           </div>
           <div class="project">
             <h4>Mirrify.io</h4>
@@ -670,6 +695,7 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
                 style="aspect-ratio: 16/9"
+                loading="lazy"
               ></iframe>
             </div>
             <p>
@@ -677,7 +703,12 @@
               HTML games, static sites, personal projects — all yours in one
               click.
             </p>
-            <a href="https://mirrify.io" target="_blank">Visit Site</a>
+            <a
+              href="https://mirrify.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Visit Site</a
+            >
           </div>
         </div>
       </div>
