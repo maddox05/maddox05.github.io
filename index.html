@@ -208,25 +208,18 @@
         display: inline-block;
       }
 
-      .skills {
+      /* Projects horizontal layout */
+      .projects-container {
         display: flex;
+        gap: 2rem;
         flex-wrap: wrap;
-        gap: 0.5rem;
         margin-top: 1rem;
       }
 
-      .skill {
-        background-color: var(--secondary);
-        color: white;
-        padding: 0.5rem 1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        border: 2px solid var(--text);
-      }
-
       .project {
-        margin-bottom: 1rem;
+        flex: 1;
+        min-width: 300px;
+        margin-bottom: 0;
       }
 
       .project h4 {
@@ -250,6 +243,49 @@
         background-color: var(--tertiary);
         bottom: 0;
         left: 0;
+      }
+
+      .project .video-container {
+        margin-bottom: 1rem;
+      }
+
+      .project p {
+        margin-bottom: 0.5rem;
+      }
+
+      /* More projects link styling */
+      .more-projects {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 3px solid var(--primary);
+      }
+
+      /* Responsive adjustments for projects */
+      @media (max-width: 1024px) {
+        .projects-container {
+          flex-direction: column;
+        }
+
+        .project {
+          min-width: auto;
+        }
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .skill {
+        background-color: var(--secondary);
+        color: white;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        border: 2px solid var(--text);
       }
 
       .link-section {
@@ -326,24 +362,34 @@
       }
 
       .about-section {
-        padding: 2rem;
+        padding: 1.5rem;
         background-color: white;
         border: 4px solid var(--text);
         box-shadow: 10px 10px 0 var(--text);
         margin-bottom: 2rem;
+        line-height: 1.4;
       }
 
       .about-content {
         display: flex;
-        gap: 2rem;
+        gap: 1.5rem;
         align-items: center;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
       }
 
       .profile-pic {
-        max-width: 200px;
+        z-index: 2;
+        max-width: 150px;
         border: 5px solid var(--text);
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .about-section p {
+        margin-bottom: 0.8rem;
+      }
+
+      .about-section p:last-child {
+        margin-bottom: 0;
       }
 
       /* Neo-brutalist stamp elements */
@@ -357,7 +403,7 @@
         padding: 10px 15px;
         border: 3px solid var(--text);
         box-shadow: 3px 3px 0 var(--text);
-        z-index: 10;
+        z-index: -1;
       }
 
       .stamp.red {
@@ -367,6 +413,7 @@
       }
 
       .stamp.yellow {
+        z-index: 1;
         background-color: var(--primary);
         color: var(--text);
         top: 300px;
@@ -596,7 +643,7 @@
       <section class="about-section">
         <div class="about-content">
           <img
-            src="assets/img/profile.webp"
+            src="assets/img/maddox.jpg"
             alt="Maddox Schmidlkofer"
             class="profile-pic"
           />
@@ -618,38 +665,18 @@
         </p>
         <p>
           I don't want to work for someone else on something I don't care about.
-          I want to do something great. Besides coding, I enjoy mountain biking
-          and hiking with my girlfriend.
+          I want to do something great.
+        </p>
+        <br />
+        <p>
+          Besides coding, I enjoy mountain biking 🚵‍♂️, shooting 🎯, the outdoors
+          🌲, soccer 🥅, and hiking with my girlfriend 🥾❤️.
         </p>
       </section>
 
-      <section class="about-section" style="position: relative">
-        <div class="photo-grid">
-          <div class="photo-card large">
-            <img src="assets/img/wide_ash_ketchup.jpg" alt="Wide Ash Ketchup" />
-            <!-- <div class="photo-label">Mountain Biking</div> -->
-          </div>
-          <div class="photo-card medium">
-            <img src="assets/img/big_blue.jpg" alt="Big Blue" />
-            <!-- <div class="photo-label">Hiking</div> -->
-          </div>
-          <div class="photo-card medium">
-            <img
-              src="assets/img/clock_tower_night.jpg"
-              alt="Clock Tower at Night"
-            />
-            <!-- <div class="photo-label">Purdue</div> -->
-          </div>
-          <!-- <div class="photo-card large">
-            <img src="assets/img/duckmath.png" alt="DuckMath" />
-            <div class="photo-label">Projects</div>
-          </div>-->
-        </div>
-      </section>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Projects</h3>
+      <section class="about-section">
+        <h2>Projects</h2>
+        <div class="projects-container">
           <div class="project">
             <h4>DuckMath</h4>
             <div class="video-container">
@@ -710,8 +737,6 @@
             </div>
             <p>
               Mirrify is a no-nonsense tool that downloads any site you give it.
-              HTML games, static sites, personal projects — all yours in one
-              click.
             </p>
             <a
               href="https://mirrify.io"
@@ -721,7 +746,41 @@
             >
           </div>
         </div>
-      </div>
+        <div class="more-projects">
+          <p>
+            More: <a href="https://exampredictor.org">exampredictor.org</a>
+            <a href="https://alltutors.org">alltutors.org</a>
+            <a href="https://fullsusmtb.org">fullsusmtb.org</a>
+            <a href="https://ubghub.org">ubghub.org</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section" style="position: relative">
+        <div class="photo-grid">
+          <div class="photo-card large">
+            <img src="assets/img/wide_ash_ketchup.jpg" alt="Wide Ash Ketchup" />
+            <!-- <div class="photo-label">Mountain Biking</div> -->
+          </div>
+          <div class="photo-card medium">
+            <img src="assets/img/big_blue.jpg" alt="Big Blue" />
+            <!-- <div class="photo-label">Hiking</div> -->
+          </div>
+          <div class="photo-card medium">
+            <img
+              src="assets/img/clock_tower_night.jpg"
+              alt="Clock Tower at Night"
+            />
+            <!-- <div class="photo-label">Purdue</div> -->
+          </div>
+          <div class="photo-card medium">
+            <img src="assets/img/aban_train_matt.JPEG" alt="Aban Train" />
+          </div>
+          <div class="photo-card medium">
+            <img src="assets/img/snow_big_blue.jpg" alt="Snow Big Blue" />
+          </div>
+        </div>
+      </section>
 
       <div class="link-section">
         <h3>Connect With Me</h3>
