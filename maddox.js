@@ -1,7 +1,7 @@
 console.log("All work and no play makes Maddox a dull boy.");
 
 // Ad Banner Injection System
-class AdBannerInjector {
+class BannerInjector {
   constructor() {
     this.bannerData = [
       {
@@ -10,12 +10,18 @@ class AdBannerInjector {
         link: "https://blogbott.com",
       },
     ];
-    this.bannerId = "injected-ad-banner";
+    this.bannerId = "injected-banner";
   }
 
   getRandomBannerData() {
     const randomIndex = Math.floor(Math.random() * this.bannerData.length);
-    return this.bannerData[randomIndex];
+    let bannerData = this.bannerData[randomIndex];
+    const site_url = new URL(bannerData.link);
+    if (site_url.hostname === window.location.hostname) {
+      const nextIndex = (randomIndex + 1) % this.bannerData.length;
+      bannerData = this.bannerData[nextIndex];
+    }
+    return bannerData;
   }
 
   createBannerStyles() {
@@ -184,8 +190,8 @@ class AdBannerInjector {
 }
 
 // Auto-inject the banner when script loads
-const adBanner = new AdBannerInjector();
-adBanner.inject();
+const bannerInjector = new BannerInjector();
+bannerInjector.inject();
 
 // Expose globally for manual control if needed
-window.AdBannerInjector = AdBannerInjector;
+window.BannerInjector = BannerInjector;
