@@ -162,7 +162,7 @@ class BannerInjector {
 
     banner.innerHTML = `
             <div class="banner-content">
-                <a href="${bannerData.link}" class="banner-title" target="_blank" rel="noopener noreferrer">
+                <a href="${bannerData.link}?utm_source=maddox.page&utm_medium=banner&utm_campaign=maddox.page" class="banner-title" target="_blank" rel="noopener noreferrer">
                     ${bannerData.title}
                 </a>
                 <div class="banner-memo">${bannerData.memo}</div>
