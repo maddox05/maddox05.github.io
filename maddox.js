@@ -9,6 +9,11 @@ class BannerInjector {
         memo: "Automate SEO & Drive Traffic to your Site with BlogBott",
         link: "https://blogbott.com",
       },
+      {
+        title: "📞 ColdCallBot",
+        memo: "Stop searching for leads and sending emails, let ColdCallBot do it for you.",
+        link: "https://coldcallbot.com",
+      },
     ];
     this.bannerId = "injected-banner";
   }
