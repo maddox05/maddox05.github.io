@@ -304,5 +304,64 @@ function generateMediaHTML(project) {
   }
 }
 
+// Scroll animation functionality
+function initScrollAnimations() {
+  // Animate timeline line as user scrolls
+  function updateTimelineLine() {
+    const timeline = document.querySelector(".timeline-container");
+    if (!timeline) return;
+
+    const rect = timeline.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const timelineHeight = timeline.offsetHeight;
+
+    // Calculate how much of the timeline is visible
+    const visibleStart = Math.max(0, -rect.top);
+    const visibleEnd = Math.min(timelineHeight, windowHeight - rect.top);
+    const visibleHeight = Math.max(0, visibleEnd - visibleStart);
+
+    // Calculate percentage of timeline that should be filled
+    const percentage = Math.min(100, (visibleHeight / timelineHeight) * 100);
+
+    // Update the timeline line height
+    timeline.style.setProperty("--timeline-progress", `${percentage}%`);
+    document.documentElement.style.setProperty(
+      "--timeline-progress",
+      `${percentage}%`
+    );
+  }
+
+  // Intersection Observer for timeline items
+  const observerOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -10% 0px",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Add staggered delay for multiple items entering at once
+        setTimeout(() => {
+          entry.target.classList.add("animate-in");
+        }, index * 150);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all timeline items
+  const timelineItems = document.querySelectorAll(".timeline-item");
+  timelineItems.forEach((item) => {
+    observer.observe(item);
+  });
+
+  // Update timeline line on scroll
+  window.addEventListener("scroll", updateTimelineLine);
+  updateTimelineLine(); // Initial call
+}
+
 // Initialize timeline when DOM is loaded
-document.addEventListener("DOMContentLoaded", renderProjectsTimeline);
+document.addEventListener("DOMContentLoaded", () => {
+  renderProjectsTimeline();
+  // Wait a bit for DOM to be fully ready, then init animations
+  setTimeout(initScrollAnimations, 100);
+});
