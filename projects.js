@@ -8,6 +8,7 @@ const projects = [
     description: "AI-powered cold calling automation bot",
     url: "https://coldcallbot.com",
     type: "main",
+    metrics: {},
   },
   {
     id: "blogbott",
@@ -17,6 +18,7 @@ const projects = [
     description: "AI blog content generation platform",
     url: "https://blogbott.com",
     type: "main",
+    metrics: {},
   },
   {
     id: "wavelandgunclub",
@@ -27,6 +29,18 @@ const projects = [
     description: "Professional shooting club website",
     url: "https://wavelandgunclub.com",
     type: "main",
+    metrics: {},
+  },
+  {
+    id: "commonground",
+    title: "CommonGround",
+    date: "2025-01-21",
+    iconUrl: "https://commonground.click/favicon.ico",
+    description:
+      "A social experiment to help divided republicans and democrats find common ground on complex topics via short, live-chat discussions.",
+    url: "https://commonground.click",
+    type: "main",
+    metrics: { users: "None Yet" },
   },
   {
     id: "ubghub",
@@ -36,6 +50,7 @@ const projects = [
     description: "Unblocked games hub platform",
     url: "https://ubghub.org",
     type: "main",
+    metrics: {},
   },
   {
     id: "fullsusmtb",
@@ -45,6 +60,7 @@ const projects = [
     description: "Mountain biking community and gear reviews",
     url: "https://fullsusmtb.org",
     type: "main",
+    metrics: {},
   },
   {
     id: "alltutors",
@@ -54,6 +70,7 @@ const projects = [
     description: "Platform connecting students with tutors",
     url: "https://alltutors.org",
     type: "main",
+    metrics: {},
   },
 
   {
@@ -65,6 +82,7 @@ const projects = [
       "Mirrify is a no-nonsense tool that downloads any site you give it.",
     url: "https://mirrify.io",
     type: "featured",
+    metrics: {},
     media: {
       type: "youtube",
       url: "https://www.youtube.com/embed/dceV3ljBcxQ",
@@ -80,6 +98,11 @@ const projects = [
       "Find free past exams & study material filtered by your college",
     url: "https://quackprep.com",
     type: "featured",
+    metrics: {
+      users: "200+ College students",
+
+      revenue: "$20 (hah) ",
+    },
     media: {
       type: "video",
       url: "https://quackprep.com/vid/quack.mp4",
@@ -93,6 +116,11 @@ const projects = [
     description: "An unblocked games site with 6M+ views and 7k ARR",
     url: "https://duckmath.org",
     type: "featured",
+    metrics: {
+      users: "6M+ views",
+
+      revenue: "$7k ARR",
+    },
     media: {
       type: "image",
       url: "assets/img/duckmath.png",
@@ -179,13 +207,10 @@ function renderIndividualProject(container, project, index) {
       <div class="timeline-details">
         ${mediaHTML}
         <div style="margin-top: 1rem;">
-          <strong>Type:</strong> ${
-            project.type === "featured" ? "Featured Project" : "Side Project"
-          }<br>
-          <strong>Status:</strong> Active<br>
+          <strong>Users:</strong> ${project.metrics?.users || "None Yet"}<br>
           ${
-            project.type === "featured"
-              ? "<strong>Details:</strong> Major project with media showcase"
+            project.metrics?.revenue
+              ? `<strong>Revenue:</strong> ${project.metrics.revenue}<br>`
               : ""
           }
         </div>
@@ -225,9 +250,12 @@ function renderBundledProjects(container, monthProjects, index) {
         <h5>${project.title}</h5>
         <p>${project.description}</p>
         <div class="tooltip-details">
-          <strong>Type:</strong> ${
-            project.type === "featured" ? "Featured" : "Side Project"
-          }<br>
+          <strong>Users:</strong> ${project.metrics?.users || "None Yet"}<br>
+          ${
+            project.metrics?.revenue
+              ? `<strong>Revenue:</strong> ${project.metrics.revenue}<br>`
+              : ""
+          }
           <a href="${
             project.url
           }" target="_blank" rel="noopener noreferrer">Visit Site <i class="fas fa-external-link-alt"></i></a>
