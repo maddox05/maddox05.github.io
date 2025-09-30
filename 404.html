@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/img/mtb_icon.png" />
+    <title>404 - Page Not Found | Maddox's Site</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5VNZJZT1MH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-5VNZJZT1MH");
+    </script>
+    <link rel="stylesheet" href="assets/css/globals.css" />
+    <style>
+      /* 404 Specific Styles */
+      .error-container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .error-404 {
+        font-size: 12rem;
+        font-weight: 900;
+        color: var(--tertiary);
+        text-shadow: 8px 8px 0 var(--text);
+        margin: 0;
+        position: relative;
+        animation: glitch-404 2s infinite;
+        transform: rotate(-2deg);
+      }
+
+      .error-404::before,
+      .error-404::after {
+        content: "404";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .error-404::before {
+        left: 4px;
+        text-shadow: -4px 0 var(--accent);
+        clip: rect(44px, 9999px, 90px, 0);
+        animation: glitch-anim-1 2s infinite linear alternate-reverse;
+      }
+
+      .error-404::after {
+        left: -4px;
+        text-shadow: 4px 0 var(--primary);
+        clip: rect(85px, 9999px, 140px, 0);
+        animation: glitch-anim-2 1.5s infinite linear alternate-reverse;
+      }
+
+      @keyframes glitch-404 {
+        0%,
+        100% {
+          transform: rotate(-2deg) translate(0);
+        }
+        20% {
+          transform: rotate(-1deg) translate(-2px, 2px);
+        }
+        40% {
+          transform: rotate(-3deg) translate(2px, -2px);
+        }
+        60% {
+          transform: rotate(-1deg) translate(-1px, 1px);
+        }
+        80% {
+          transform: rotate(-2deg) translate(1px, -1px);
+        }
+      }
+
+      .error-message {
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--text);
+        margin: 2rem 0;
+        padding: 1rem 2rem;
+        background-color: var(--primary);
+        border: 4px solid var(--text);
+        box-shadow: 8px 8px 0 var(--text);
+        transform: rotate(1deg);
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: rotate(1deg) translateY(0px);
+        }
+        50% {
+          transform: rotate(-1deg) translateY(-10px);
+        }
+      }
+
+      .error-description {
+        font-size: 1.2rem;
+        color: var(--text);
+        margin: 2rem 0;
+        max-width: 600px;
+        line-height: 1.6;
+        padding: 1.5rem;
+        background-color: white;
+        border: 4px solid var(--text);
+        box-shadow: 10px 10px 0 var(--text);
+        position: relative;
+      }
+
+      .error-description::before {
+        content: "💥";
+        position: absolute;
+        top: -20px;
+        left: 20px;
+        font-size: 2rem;
+        background-color: var(--tertiary);
+        border: 3px solid var(--text);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      .error-actions {
+        display: flex;
+        gap: 2rem;
+        margin: 3rem 0;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .error-btn {
+        background-color: var(--secondary);
+        color: white;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 4px solid var(--text);
+        box-shadow: 8px 8px 0 var(--text);
+        transition: all 0.2s ease;
+        font-size: 1.1rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .error-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .error-btn:hover::before {
+        left: 100%;
+      }
+
+      .error-btn:hover {
+        background-color: var(--text);
+        transform: translate(-4px, -4px);
+        box-shadow: 12px 12px 0 var(--tertiary);
+      }
+
+      .error-btn.primary {
+        background-color: var(--tertiary);
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 8px 8px 0 var(--text);
+        }
+        50% {
+          box-shadow: 8px 8px 0 var(--text), 0 0 20px var(--tertiary);
+        }
+        100% {
+          box-shadow: 8px 8px 0 var(--text);
+        }
+      }
+
+      .floating-elements {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .floating-element {
+        position: absolute;
+        font-size: 2rem;
+        opacity: 0.1;
+        animation: float-around 10s infinite linear;
+      }
+
+      .floating-element:nth-child(1) {
+        top: 10%;
+        left: 10%;
+        animation-delay: 0s;
+      }
+      .floating-element:nth-child(2) {
+        top: 20%;
+        right: 10%;
+        animation-delay: 2s;
+      }
+      .floating-element:nth-child(3) {
+        bottom: 30%;
+        left: 20%;
+        animation-delay: 4s;
+      }
+      .floating-element:nth-child(4) {
+        bottom: 10%;
+        right: 20%;
+        animation-delay: 6s;
+      }
+      .floating-element:nth-child(5) {
+        top: 50%;
+        left: 5%;
+        animation-delay: 8s;
+      }
+
+      @keyframes float-around {
+        0% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-20px) rotate(90deg);
+        }
+        50% {
+          transform: translateY(0px) rotate(180deg);
+        }
+        75% {
+          transform: translateY(20px) rotate(270deg);
+        }
+        100% {
+          transform: translateY(0px) rotate(360deg);
+        }
+      }
+
+      .matrix-rain {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -2;
+        opacity: 0.1;
+      }
+
+      .matrix-column {
+        position: absolute;
+        top: -100%;
+        font-family: "Courier New", monospace;
+        font-size: 14px;
+        color: var(--accent);
+        animation: matrix-fall 3s infinite linear;
+      }
+
+      @keyframes matrix-fall {
+        0% {
+          top: -100%;
+        }
+        100% {
+          top: 100%;
+        }
+      }
+
+      .error-stamp {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        background-color: var(--accent);
+        color: white;
+        padding: 1rem 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 4px solid var(--text);
+        box-shadow: 6px 6px 0 var(--text);
+        transform: rotate(15deg);
+        animation: stamp-wiggle 4s infinite;
+      }
+
+      @keyframes stamp-wiggle {
+        0%,
+        100% {
+          transform: rotate(15deg);
+        }
+        25% {
+          transform: rotate(12deg);
+        }
+        75% {
+          transform: rotate(18deg);
+        }
+      }
+
+      .error-stamp-2 {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        background-color: var(--primary);
+        color: var(--text);
+        padding: 0.8rem 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 4px solid var(--text);
+        box-shadow: 6px 6px 0 var(--text);
+        transform: rotate(-10deg);
+        animation: stamp-wiggle-2 3s infinite;
+      }
+
+      @keyframes stamp-wiggle-2 {
+        0%,
+        100% {
+          transform: rotate(-10deg);
+        }
+        50% {
+          transform: rotate(-8deg);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .error-404 {
+          font-size: 8rem;
+        }
+
+        .error-message {
+          font-size: 1.5rem;
+          padding: 0.8rem 1.5rem;
+        }
+
+        .error-description {
+          font-size: 1rem;
+          margin: 1rem;
+          padding: 1rem;
+        }
+
+        .error-actions {
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        .error-btn {
+          width: 200px;
+        }
+
+        .error-stamp,
+        .error-stamp-2 {
+          position: relative;
+          top: auto;
+          right: auto;
+          bottom: auto;
+          left: auto;
+          margin: 1rem;
+          display: inline-block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-container">
+      <!-- Matrix Rain Effect -->
+      <div class="matrix-rain" id="matrixRain"></div>
+
+      <!-- Floating Elements -->
+      <div class="floating-elements">
+        <div class="floating-element">🚵‍♂️</div>
+        <div class="floating-element">💻</div>
+        <div class="floating-element">🎯</div>
+        <div class="floating-element">🌲</div>
+        <div class="floating-element">⚡</div>
+      </div>
+
+      <!-- Error Stamps -->
+      <div class="error-stamp">LOST IN SPACE</div>
+      <div class="error-stamp-2">404 ERROR</div>
+
+      <!-- Main Error Content -->
+      <h1 class="error-404">404</h1>
+
+      <div class="error-message">
+        Oops! This page went mountain biking and never came back! 🚵‍♂️
+      </div>
+
+      <div class="error-description">
+        Looks like you've ventured into uncharted territory! The page you're
+        looking for has either been moved, deleted, or is currently out
+        exploring the great outdoors. Don't worry though - even the best trails
+        sometimes lead to dead ends!
+        <br /><br />
+        <strong>What you can do:</strong>
+        <br />• Check the URL for typos <br />• Go back to the homepage and
+        start fresh <br />• Check out my projects or blog instead <br />• Or
+        just enjoy this cool 404 page I made! 😎
+      </div>
+
+      <div class="error-actions">
+        <a href="/" class="error-btn primary">
+          <i class="fas fa-home"></i> Back to Home
+        </a>
+        <a href="/blog" class="error-btn">
+          <i class="fas fa-blog"></i> Check Blog
+        </a>
+        <a href="https://github.com/maddox05" class="error-btn" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+
+    <script>
+      // Matrix rain effect
+      function createMatrixRain() {
+        const matrixRain = document.getElementById("matrixRain");
+        const characters = "01";
+
+        for (let i = 0; i < 20; i++) {
+          const column = document.createElement("div");
+          column.className = "matrix-column";
+          column.style.left = Math.random() * 100 + "%";
+          column.style.animationDelay = Math.random() * 3 + "s";
+          column.style.animationDuration = Math.random() * 3 + 2 + "s";
+
+          let text = "";
+          for (let j = 0; j < 20; j++) {
+            text +=
+              characters[Math.floor(Math.random() * characters.length)] +
+              "<br>";
+          }
+          column.innerHTML = text;
+
+          matrixRain.appendChild(column);
+        }
+      }
+
+      // Add some interactive elements
+      document.addEventListener("DOMContentLoaded", function () {
+        createMatrixRain();
+
+        // Add click effects to buttons
+        const buttons = document.querySelectorAll(".error-btn");
+        buttons.forEach((button) => {
+          button.addEventListener("click", function (e) {
+            // Create ripple effect
+            const ripple = document.createElement("span");
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+
+            ripple.style.width = ripple.style.height = size + "px";
+            ripple.style.left = x + "px";
+            ripple.style.top = y + "px";
+            ripple.style.position = "absolute";
+            ripple.style.borderRadius = "50%";
+            ripple.style.background = "rgba(255,255,255,0.3)";
+            ripple.style.transform = "scale(0)";
+            ripple.style.animation = "ripple 0.6s linear";
+            ripple.style.pointerEvents = "none";
+
+            this.style.position = "relative";
+            this.style.overflow = "hidden";
+            this.appendChild(ripple);
+
+            setTimeout(() => {
+              ripple.remove();
+            }, 600);
+          });
+        });
+      });
+
+      // Add ripple animation
+      const style = document.createElement("style");
+      style.textContent = `
+        @keyframes ripple {
+          to {
+            transform: scale(4);
+            opacity: 0;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    </script>
+  </body>
+</html>
