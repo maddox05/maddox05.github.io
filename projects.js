@@ -11,6 +11,17 @@ const projects = [
     metrics: {},
   },
   {
+    id: "marbleskies",
+    title: "Marble Skies",
+    date: "2025-03-15",
+    iconUrl:
+      "https://raw.githubusercontent.com/duckmath/icons/refs/heads/main/marble_skies.webp",
+    description: "Dune like game made in Unity with C#",
+    url: "https://duckmath.org/g4m3s/?title=Marble-Skies",
+    type: "main",
+    metrics: {},
+  },
+  {
     id: "blogbott",
     title: "BlogBott",
     date: "2025-06-02",
