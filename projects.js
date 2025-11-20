@@ -11,17 +11,6 @@ const projects = [
     metrics: {},
   },
   {
-    id: "marbleskies",
-    title: "Marble Skies",
-    date: "2025-03-15",
-    iconUrl:
-      "https://raw.githubusercontent.com/duckmath/icons/refs/heads/main/marble_skies.webp",
-    description: "Dune like game made in Unity with C#",
-    url: "https://duckmath.org/g4m3s/?title=Marble-Skies",
-    type: "main",
-    metrics: { users: "5000+ players" },
-  },
-  {
     id: "blogbott",
     title: "BlogBott",
     date: "2025-06-02",
@@ -43,15 +32,14 @@ const projects = [
     metrics: {},
   },
   {
-    id: "commonground",
-    title: "CommonGround",
-    date: "2025-01-21",
-    iconUrl: "https://commonground.click/favicon.ico",
-    description:
-      "A social experiment to help divided republicans and democrats find common ground on complex topics via short, live-chat discussions.",
-    url: "https://commonground.click",
+    id: "fullsusmtb",
+    title: "Full Sus MTB",
+    date: "2025-05-27",
+    iconUrl: "https://fullsusmtb.org/mtb_icon.png",
+    description: "Mountain biking community and gear reviews",
+    url: "https://fullsusmtb.org",
     type: "main",
-    metrics: { users: "None Yet" },
+    metrics: {},
   },
   {
     id: "ubghub",
@@ -60,16 +48,6 @@ const projects = [
     iconUrl: "https://ubghub.org/ubghub.png",
     description: "Unblocked games hub platform",
     url: "https://ubghub.org",
-    type: "main",
-    metrics: {},
-  },
-  {
-    id: "fullsusmtb",
-    title: "Full Sus MTB",
-    date: "2025-05-27",
-    iconUrl: "https://fullsusmtb.org/mtb_icon.png",
-    description: "Mountain biking community and gear reviews",
-    url: "https://fullsusmtb.org",
     type: "main",
     metrics: {},
   },
@@ -83,7 +61,6 @@ const projects = [
     type: "main",
     metrics: {},
   },
-
   {
     id: "mirrify",
     title: "Mirrify.io",
@@ -99,6 +76,28 @@ const projects = [
       url: "https://www.youtube.com/embed/dceV3ljBcxQ",
       title: "Mirrify.io Demo",
     },
+  },
+  {
+    id: "marbleskies",
+    title: "Marble Skies",
+    date: "2025-03-15",
+    iconUrl:
+      "https://raw.githubusercontent.com/duckmath/icons/refs/heads/main/marble_skies.webp",
+    description: "Dune like game made in Unity with C#",
+    url: "https://duckmath.org/g4m3s/?title=Marble-Skies",
+    type: "main",
+    metrics: { users: "5000+ players" },
+  },
+  {
+    id: "commonground",
+    title: "CommonGround",
+    date: "2025-01-21",
+    iconUrl: "https://commonground.click/favicon.ico",
+    description:
+      "A social experiment to help divided republicans and democrats find common ground on complex topics via short, live-chat discussions.",
+    url: "https://commonground.click",
+    type: "main",
+    metrics: { users: "None Yet" },
   },
   {
     id: "quackprep",
@@ -122,8 +121,8 @@ const projects = [
   {
     id: "duckmath",
     title: "DuckMath",
-    date: "2023-08-01",
-    iconUrl: "https://duckmath.org/assets/img/duck.webp",
+    date: "2022-01-20",
+    iconUrl: "https://duckmath.org/imgs/duck.webp",
     description: "An unblocked games site with 6M+ views and 7k ARR",
     url: "https://duckmath.org",
     type: "featured",
@@ -156,7 +155,7 @@ const projects = [
   {
     id: "python-rust",
     title: "Python Rust",
-    date: "2022-02-01",
+    date: "2022-02-02",
     iconUrl: "https://files.facepunch.com/rust/item/rifle.ak_512.png",
     description: "A python script to combat recoil in Rust the game",
     url: null,
@@ -196,7 +195,12 @@ function renderProjectsTimeline() {
 
   container.innerHTML = "";
 
-  const groupedProjects = groupProjectsByMonth(projects);
+  // Auto-sort projects by date (newest to oldest)
+  const sortedProjects = [...projects].sort((a, b) => {
+    return new Date(b.date) - new Date(a.date);
+  });
+
+  const groupedProjects = groupProjectsByMonth(sortedProjects);
   let itemIndex = 0;
 
   // Process each month group
