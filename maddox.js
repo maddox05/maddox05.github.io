@@ -3,22 +3,16 @@ console.log("All work and no play makes Maddox a dull boy.");
 // Ad Banner Injection System
 class BannerInjector {
   constructor() {
-    this.bannerData = [
-      {
-        title: "🚀 BlogBott",
-        memo: "Automate SEO & Drive Traffic to your Site with BlogBott",
-        link: "https://blogbott.com",
-      },
-      {
-        title: "📞 ColdCallBot",
-        memo: "Stop searching for leads and sending emails, let ColdCallBot do it for you.",
-        link: "https://coldcallbot.com",
-      },
-    ];
+    this.bannerData = [];
     this.bannerId = "injected-banner";
   }
 
   getRandomBannerData() {
+    // Return null if no banner data exists
+    if (!this.bannerData || this.bannerData.length === 0) {
+      return null;
+    }
+
     const randomIndex = Math.floor(Math.random() * this.bannerData.length);
     let bannerData = this.bannerData[randomIndex];
     const site_url = new URL(bannerData.link);
@@ -161,6 +155,12 @@ class BannerInjector {
     }
 
     const bannerData = this.getRandomBannerData();
+
+    // Don't create banner if no data is available
+    if (!bannerData) {
+      console.log("No banner data available, skipping banner creation.");
+      return;
+    }
 
     const banner = document.createElement("div");
     banner.id = this.bannerId;
