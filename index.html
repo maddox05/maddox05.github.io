@@ -26,13 +26,31 @@
       gtag("config", "G-5VNZJZT1MH");
     </script>
     <link rel="stylesheet" href="assets/css/globals.css" />
+    <script type="module">
+      import { main } from './goose/Main.js';
+
+      window.addEventListener('DOMContentLoaded', () => {
+        const surpriseBtn = document.getElementById('surprise-btn');
+        let gooseRunning = false;
+
+        surpriseBtn.addEventListener('click', () => {
+          if (!gooseRunning) {
+            gooseRunning = true;
+            surpriseBtn.disabled = true;
+            surpriseBtn.textContent = 'Goose is loose!';
+            main();
+          }
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="container">
       <header>
         <div>
           <h1 class="glitch-effect">Maddox Schmidlkofer</h1>
-          <p
+          <button
+            id="surprise-btn"
             style="
               font-weight: bold;
               letter-spacing: 2px;
@@ -42,10 +60,13 @@
               color: white;
               padding: 5px 10px;
               margin-top: 10px;
+              border: none;
+              cursor: pointer;
+              font-family: inherit;
             "
           >
-            Entrepreneur, Explorer
-          </p>
+            Click me for a surprise
+          </button>
         </div>
         <nav>
           <a href="/blog">Blog</a>
