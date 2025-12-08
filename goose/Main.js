@@ -1,4 +1,4 @@
-import Entity from "./Entity.jsz";
+import Entity from "./Entity.js";
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
