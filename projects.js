@@ -82,7 +82,7 @@ const projects = [
     title: "Marble Skies",
     date: "2025-03-15",
     iconUrl:
-      "https://raw.githubusercontent.com/duckmath/icons/refs/heads/main/marble_skies.webp",
+      "https://cdn.jsdelivr.net/gh/mathlesson/mathlesson.github.io/marble_skies.webp",
     description: "Dune like game made in Unity with C#",
     url: "https://duckmath.org/g4m3s/?title=Marble-Skies",
     type: "main",
@@ -119,17 +119,37 @@ const projects = [
     },
   },
   {
+    id: "skysniffer",
+    title: "SkySniffer - Contrail Analyser",
+    date: "2025-12-03",
+    iconUrl:
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/06/8d/02/068d025a-59b7-d5e2-19c3-6d56f3434308/Placeholder.mill/200x200bb-75.webp",
+    description:
+      "AI-powered iOS app that analyzes sky photos to identify contrail patterns and provides educational insights about aviation emissions",
+    url: "https://apps.apple.com/us/app/skysniffer-contrail-analyser/id6756071974",
+    type: "featured",
+    metrics: {
+      users: "15 users",
+      revenue: "$0",
+    },
+    media: {
+      type: "image",
+      url: "assets/img/skysniffer.png",
+      alt: "SkySniffer - Contrail Analyser App",
+    },
+  },
+  {
     id: "duckmath",
     title: "DuckMath",
-    date: "2022-01-20",
+    date: "2021-10-11",
     iconUrl: "https://duckmath.org/imgs/duck.webp",
-    description: "An unblocked games site with 6M+ views and 7k ARR",
+    description: "An unblocked games site with 150k daily users and 150k ARR",
     url: "https://duckmath.org",
     type: "featured",
     metrics: {
-      users: "6M+ views",
+      users: "150k DAU",
 
-      revenue: "$7k ARR",
+      revenue: "$150k ARR",
     },
     media: {
       type: "image",
