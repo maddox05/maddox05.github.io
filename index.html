@@ -27,17 +27,17 @@
     </script>
     <link rel="stylesheet" href="assets/css/globals.css" />
     <script type="module">
-      import { main } from './goose/Main.js';
+      import { main } from "./goose/Main.js";
 
-      window.addEventListener('DOMContentLoaded', () => {
-        const surpriseBtn = document.getElementById('surprise-btn');
+      window.addEventListener("DOMContentLoaded", () => {
+        const surpriseBtn = document.getElementById("surprise-btn");
         let gooseRunning = false;
 
-        surpriseBtn.addEventListener('click', () => {
+        surpriseBtn.addEventListener("click", () => {
           if (!gooseRunning) {
             gooseRunning = true;
             surpriseBtn.disabled = true;
-            surpriseBtn.textContent = 'Goose is loose!';
+            surpriseBtn.textContent = "Goose is loose!";
             main();
           }
         });
@@ -183,17 +183,10 @@
             ><i class="fab fa-github"></i> GitHub</a
           >
           <a
-            href="https://youtube.com/@magicmaddox"
+            href="https://youtube.com/@maddoxschmidlkofer"
             target="_blank"
             rel="noopener noreferrer"
             ><i class="fab fa-youtube"></i> YouTube</a
-          >
-
-          <a
-            href="https://docs.google.com/document/d/1djrpzo_zKd4e2CfLq2mEkCQrAJIeqrmD"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fas fa-file-alt"></i> Resume</a
           >
         </div>
       </div>

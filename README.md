@@ -4,28 +4,28 @@
 
 ---
 
-##  About Me
+## About Me
 
-- Pursuing **Computer Science at Purdue University**  
+- Pursuing **Computer Science at Purdue University**
 - Coding since around **2019**, with experience in personal projects like a Rust recoil-control script
 - Motivated by building projects that matter—not just working on something for someone else
 
-###  Interests
+### Interests
 
-- Mountain biking  
+- Mountain biking
 - The outdoors and hiking
-- Soccer  
+- Soccer
 
 ---
 
-##  Connect With Me
+## Connect With Me
 
 Links to platforms for networking, code, and updates:
 
 - [LinkedIn](https://www.linkedin.com/in/maddox-schmidlkofer/)
 - [X (formerly Twitter)](https://x.com/_maddox1337)
 - [GitHub](https://github.com/maddox05)
-- [YouTube](https://youtube.com/@magicmaddox)
+- [YouTube](https://youtube.com/@maddoxschmidlkofer)
 - [My Site](https://maddox.page)
 
 ---
