@@ -119,9 +119,27 @@ const projects = [
     },
   },
   {
+    id: "maddoxcloud",
+    title: "MaddoxCloud",
+    date: "2025-12-15",
+    iconUrl: "https://maddoxcloud.com/favicon.ico",
+    description:
+      "Cloud gaming platform to play Android games in your browser. Stream games instantly with no downloads or installs.",
+    url: "https://maddoxcloud.com",
+    type: "featured",
+    metrics: {
+      users: "3 users",
+    },
+    media: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/y223487eYRY",
+      title: "MaddoxCloud Demo",
+    },
+  },
+  {
     id: "skysniffer",
     title: "SkySniffer - Contrail Analyser",
-    date: "2025-12-03",
+    date: "2025-11-30",
     iconUrl:
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/06/8d/02/068d025a-59b7-d5e2-19c3-6d56f3434308/Placeholder.mill/200x200bb-75.webp",
     description:
