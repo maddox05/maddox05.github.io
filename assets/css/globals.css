@@ -1027,3 +1027,143 @@ h2 {
   box-shadow: 6px 6px 0 var(--text);
   z-index: 3;
 }
+
+/* Navigation with multiple links */
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 5px solid var(--text);
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+  border-color: var(--text);
+  background-color: var(--primary);
+}
+
+.site-footer p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Contact form */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  border: 3px solid var(--text);
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  box-shadow: 5px 5px 0 var(--text);
+  transform: translate(-2px, -2px);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-submit {
+  background-color: var(--secondary);
+  color: white;
+  padding: 1rem 2rem;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border: 3px solid var(--text);
+  box-shadow: 6px 6px 0 var(--text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 1px;
+}
+
+.form-submit:hover {
+  background-color: var(--tertiary);
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 var(--text);
+}
+
+/* Legal page link styles */
+.about-section a {
+  color: var(--text);
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: var(--tertiary);
+  text-underline-offset: 3px;
+  transition: all 0.2s ease;
+}
+
+.about-section a:hover {
+  background-color: var(--primary);
+}
+
+.about-section h3 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  border-left: 6px solid var(--primary);
+  padding-left: 0.8rem;
+}
+
+.about-section ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}

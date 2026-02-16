@@ -85,8 +85,13 @@ const projects = [
       "https://cdn.jsdelivr.net/gh/mathlesson/mathlesson.github.io/marble_skies.webp",
     description: "Dune like game made in Unity with C#",
     url: "https://duckmath.org/g4m3s/?title=Marble-Skies",
-    type: "main",
+    type: "featured",
     metrics: { users: "5000+ players" },
+    media: {
+      type: "game",
+      url: "/assets/gabe/marble_skies/index.html",
+      title: "Play Marble Skies",
+    },
   },
   {
     id: "commonground",
@@ -128,7 +133,8 @@ const projects = [
     url: "https://maddoxcloud.com",
     type: "featured",
     metrics: {
-      users: "3 users",
+      users: "50k users",
+      revenue: "$500 MRR",
     },
     media: {
       type: "youtube",
@@ -402,6 +408,14 @@ function generateMediaHTML(project) {
             <source src="${project.media.url}" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+        </div>
+      `;
+    case "game":
+      return `
+        <div class="timeline-media">
+          <div style="width:100%;height:150px;background:#171c28;display:flex;align-items:center;justify-content:center;cursor:pointer;color:white;font-family:'Courier New',monospace;font-weight:bold;text-transform:uppercase;letter-spacing:1px;" onclick="openGameModal('${project.media.url}', '${project.media.title}')">
+            <span>&#9654; ${project.media.title}</span>
+          </div>
         </div>
       `;
     case "image":
