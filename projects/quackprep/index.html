@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/img/mtb_icon.png" />
+    <title>QuackPrep - Project Breakdown | Maddox's Site</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5VNZJZT1MH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-5VNZJZT1MH");
+    </script>
+    <link rel="stylesheet" href="/assets/css/globals.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div>
+          <h1 class="glitch-effect">QuackPrep</h1>
+        </div>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/blog">Blog</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </header>
+
+      <section class="about-section">
+        <h2>The Story</h2>
+        <br />
+        <p>
+          QuackPrep came from a problem I experienced firsthand as a Purdue
+          student. Studying for exams sucks. You're digging through random
+          Google results trying to find past exams, paying for Chegg or Quizlet
+          Premium, and still not sure if you're studying the right material for
+          your specific class at your specific school.
+        </p>
+        <br />
+        <p>
+          I wanted to build something that solved this for real. A platform where
+          students could find free past exams and study materials filtered by
+          their exact college and course. No paywalls, no premium tiers, no BS.
+          Just free study tools that actually help.
+        </p>
+        <br />
+        <p>
+          I launched QuackPrep in July 2024 under the OpenExams organization on
+          GitHub. It's fully open source.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>By The Numbers</h2>
+        <br />
+        <div class="photo-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+          <div class="card" style="text-align: center; box-shadow: 6px 6px 0 var(--text);">
+            <h3 style="font-size: 2.5rem; border-bottom: none; color: var(--tertiary);">200+</h3>
+            <p style="text-transform: uppercase; font-weight: bold;">College Students</p>
+          </div>
+          <div class="card" style="text-align: center; box-shadow: 6px 6px 0 var(--text);">
+            <h3 style="font-size: 2.5rem; border-bottom: none; color: var(--tertiary);">740+</h3>
+            <p style="text-transform: uppercase; font-weight: bold;">Git Commits</p>
+          </div>
+          <div class="card" style="text-align: center; box-shadow: 6px 6px 0 var(--text);">
+            <h3 style="font-size: 2.5rem; border-bottom: none; color: var(--tertiary);">$20</h3>
+            <p style="text-transform: uppercase; font-weight: bold;">Revenue (hah)</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>What It Does</h2>
+        <br />
+        <p>
+          QuackPrep has a few core features that make it different from what's
+          already out there:
+        </p>
+        <br />
+        <ul style="margin-left: 2rem;">
+          <li>
+            <strong>Past Exam Library:</strong> A searchable archive of real
+            college exams, filtered by school. No more Googling "Purdue CS 180
+            past exams" and hoping for the best.
+          </li>
+          <li>
+            <strong>School-Specific Filtering:</strong> Enter your university
+            and get tailored materials. No irrelevant content from other schools.
+          </li>
+          <li>
+            <strong>AI Study Tools:</strong> AI that identifies your weak areas
+            and generates custom quizzes targeting the stuff you actually need to
+            work on.
+          </li>
+          <li>
+            <strong>Spaced Repetition Flashcards:</strong> Cards that
+            auto-schedule reviews based on your performance, so you study right
+            before you're about to forget something.
+          </li>
+          <li>
+            <strong>Community-Driven:</strong> Students upload their own past
+            exams and materials to help future students. Pay it forward.
+          </li>
+        </ul>
+        <br />
+        <p>
+          And it's all completely free. No freemium model, no hidden paywalls.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>Tech Stack</h2>
+        <br />
+        <p>
+          QuackPrep is the most "proper" codebase I've built. It has a real
+          backend, a real database, tests, CI/CD - the whole thing. Here's what
+          powers it:
+        </p>
+        <br />
+        <ul style="margin-left: 2rem;">
+          <li>
+            <strong>Frontend:</strong> React + Redux for state management, with
+            Semantic UI components
+          </li>
+          <li>
+            <strong>Backend:</strong> Node.js + Express
+          </li>
+          <li>
+            <strong>Database:</strong> MySQL 8.0+
+          </li>
+          <li>
+            <strong>Testing:</strong> Playwright for end-to-end tests
+          </li>
+          <li>
+            <strong>Validation:</strong> Zod for input validation on the backend
+          </li>
+          <li>
+            <strong>CI/CD:</strong> GitHub Actions
+          </li>
+          <li>
+            <strong>License:</strong> GPL-3.0 (fully open source)
+          </li>
+        </ul>
+        <br />
+        <p>
+          The project uses a monorepo structure with separated frontend and
+          backend directories. Models contain business logic, routes handle API
+          endpoints, and the folder structure mirrors the API endpoints for
+          intuitive navigation. All API calls go through a standardApiCall
+          middleware.
+        </p>
+        <br />
+        <p>
+          I'll be honest - the frontend is the weakest part. It works, but it's
+          not my proudest code. The backend architecture is where I'm most happy
+          with how things turned out.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>Why Open Source</h2>
+        <br />
+        <p>
+          Most study platforms are closed-source and locked behind paywalls.
+          Chegg charges $15/month. Quizlet locked their best features behind
+          Quizlet Plus. CourseHero wants $40/month.
+        </p>
+        <br />
+        <p>
+          Students are already broke. They shouldn't have to pay to study. Making
+          QuackPrep open source and free means anyone can use it, anyone can
+          contribute to it, and if I stop working on it tomorrow, someone else
+          can fork it and keep going.
+        </p>
+        <br />
+        <p>
+          The GitHub repo has 740+ commits and 25 open issues, with a couple
+          marked as "good first issue" for anyone who wants to contribute.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>The $20 Revenue</h2>
+        <br />
+        <p>
+          Yeah, QuackPrep has made $20. Total. And I think that's fine.
+        </p>
+        <br />
+        <p>
+          Not every project needs to be a money machine. DuckMath made $150K/year
+          and got acquired. MaddoxCloud is growing its MRR. QuackPrep is the
+          project I built because I genuinely wanted it to exist. Sometimes you
+          build things because they should exist, not because they'll make you
+          rich.
+        </p>
+        <br />
+        <p>
+          That said, if 200+ college students are finding it useful, that's a
+          win. Every exam they pass a little easier because they found the right
+          study material - that's the point.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>What I Learned</h2>
+        <br />
+        <p>
+          QuackPrep taught me how to build a real full-stack application. Not a
+          static site, not a game wrapper - a proper app with user
+          authentication, database operations, API design, testing, and CI/CD.
+          It was the project that leveled up my engineering skills the most.
+        </p>
+        <br />
+        <p>
+          It also taught me that building for users is different from building
+          for myself. Understanding how students actually study, what information
+          they need and when, and how to make the experience frictionless - that
+          product thinking is something you only learn by shipping and watching
+          people use your stuff.
+        </p>
+        <br />
+        <p>
+          <a href="https://quackprep.com" target="_blank" rel="noopener noreferrer">
+            Try QuackPrep <i class="fas fa-external-link-alt"></i>
+          </a>
+          &nbsp;&nbsp;
+          <a href="https://github.com/openexams/quackprep" target="_blank" rel="noopener noreferrer">
+            View Source <i class="fab fa-github"></i>
+          </a>
+        </p>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/contact">Contact</a>
+          <a href="/about">About</a>
+        </div>
+        <p>&copy; 2026 Maddox Schmidlkofer. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>

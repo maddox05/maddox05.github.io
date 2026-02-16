@@ -112,6 +112,7 @@ const projects = [
     description:
       "Find free past exams & study material filtered by your college",
     url: "https://quackprep.com",
+    breakdownUrl: "/projects/quackprep",
     type: "featured",
     metrics: {
       users: "200+ College students",
@@ -131,6 +132,7 @@ const projects = [
     description:
       "Cloud gaming platform to play Android games in your browser. Stream games instantly with no downloads or installs.",
     url: "https://maddoxcloud.com",
+    breakdownUrl: "/projects/maddoxcloud",
     type: "featured",
     metrics: {
       users: "50k users",
@@ -169,6 +171,7 @@ const projects = [
     iconUrl: "https://duckmath.org/imgs/duck.webp",
     description: "An unblocked games site with 150k daily users and 150k ARR",
     url: "https://duckmath.org",
+    breakdownUrl: "/projects/duckmath",
     type: "featured",
     metrics: {
       users: "150k DAU",
@@ -307,6 +310,7 @@ function renderIndividualProject(container, project, index) {
       <a href="${project.url}" target="_blank" rel="noopener noreferrer">
         Visit Site <i class="fas fa-external-link-alt"></i>
       </a>
+      ${project.breakdownUrl ? `<a href="${project.breakdownUrl}" style="margin-left: 0.5rem;">Read More <i class="fas fa-arrow-right"></i></a>` : ""}
     </div>
   `;
 

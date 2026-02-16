@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/img/mtb_icon.png" />
+    <title>MaddoxCloud - Project Breakdown | Maddox's Site</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5VNZJZT1MH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-5VNZJZT1MH");
+    </script>
+    <link rel="stylesheet" href="/assets/css/globals.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div>
+          <h1 class="glitch-effect">MaddoxCloud</h1>
+        </div>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/blog">Blog</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </header>
+
+      <section class="about-section">
+        <h2>The Story</h2>
+        <br />
+        <p>
+          After selling DuckMath for $120K, I knew the next thing had to be
+          bigger. DuckMath taught me that students on school Chromebooks are an
+          underserved audience with real demand. The problem was that browser
+          games only go so far - students wanted to play real games like Roblox,
+          Clash Royale, and Toca Boca, but those require native apps that school
+          Chromebooks can't install.
+        </p>
+        <br />
+        <p>
+          The solution: stream the games from the cloud. Run Android games on
+          remote servers and pipe the video to any browser. No downloads, no
+          installs, no hardware requirements. That's MaddoxCloud.
+        </p>
+        <br />
+        <p>
+          I built it in about a month of 10-hour days and officially launched in
+          December 2025.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>By The Numbers</h2>
+        <br />
+        <div class="photo-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+          <div class="card" style="text-align: center; box-shadow: 6px 6px 0 var(--text);">
+            <h3 style="font-size: 2.5rem; border-bottom: none; color: var(--tertiary);">50K</h3>
+            <p style="text-transform: uppercase; font-weight: bold;">Users</p>
+          </div>
+          <div class="card" style="text-align: center; box-shadow: 6px 6px 0 var(--text);">
+            <h3 style="font-size: 2.5rem; border-bottom: none; color: var(--tertiary);">$500</h3>
+            <p style="text-transform: uppercase; font-weight: bold;">Monthly Revenue</p>
+          </div>
+          <div class="card" style="text-align: center; box-shadow: 6px 6px 0 var(--text);">
+            <h3 style="font-size: 2.5rem; border-bottom: none; color: var(--tertiary);">3.9/5</h3>
+            <p style="text-transform: uppercase; font-weight: bold;">Trustpilot Rating</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>How It Works</h2>
+        <br />
+        <p>
+          MaddoxCloud runs Android emulator instances on remote servers. When a
+          user picks a game, the server launches an Android instance with that
+          game, captures the video and audio output, and streams it to the
+          user's browser in real-time via WebRTC. The user's keyboard, mouse, and
+          touch inputs get relayed back to the server, so it feels like the game
+          is running locally.
+        </p>
+        <br />
+        <p>
+          The result: you can play Roblox, Clash Royale, or any Android game on
+          a school Chromebook, a crappy laptop, or even a phone browser. All you
+          need is an internet connection.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>Demo</h2>
+        <br />
+        <div style="border: 4px solid var(--text); box-shadow: 8px 8px 0 var(--text); overflow: hidden;">
+          <iframe
+            width="100%"
+            height="400"
+            src="https://www.youtube.com/embed/y223487eYRY"
+            title="MaddoxCloud Demo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>Tech Stack</h2>
+        <br />
+        <p>
+          The infrastructure behind MaddoxCloud is the most complex thing I've
+          built. Here's what powers it:
+        </p>
+        <br />
+        <ul style="margin-left: 2rem;">
+          <li>
+            <strong>Streaming:</strong> WebRTC for low-latency video/audio
+            streaming from server to browser and input relay back
+          </li>
+          <li>
+            <strong>Android Emulation:</strong> Server-side Android emulator
+            instances running game APKs on cloud compute
+          </li>
+          <li>
+            <strong>CDN/Security:</strong> Cloudflare for DDoS protection,
+            caching, and global distribution
+          </li>
+          <li>
+            <strong>Frontend:</strong> Web application served through the browser
+          </li>
+          <li>
+            <strong>SSL:</strong> Google Trust Services, domain validated
+          </li>
+        </ul>
+        <br />
+        <p>
+          The hardest part isn't the code - it's the infrastructure scaling.
+          Each user needs their own Android instance running on a server, which
+          means compute costs scale linearly with users. That's the challenge
+          I'm working on solving right now.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>The Business Model</h2>
+        <br />
+        <p>
+          MaddoxCloud runs on a freemium model. Free users get 10-minute play
+          sessions and wait in a queue when servers are at capacity. Paid users
+          get unlimited play time with no waitlist.
+        </p>
+        <br />
+        <p>
+          The waitlist has been both a blessing and a curse. At peak times,
+          queues hit 12,000+ people. That's incredible demand validation, but
+          it also means users get frustrated waiting. The long-term plan is to
+          make the platform fully free once I figure out the infrastructure
+          scaling and can bring costs down enough.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>Marketing</h2>
+        <br />
+        <p>
+          I applied the same playbook from DuckMath: aggressive short-form video
+          across every platform. TikTok, Snapchat, YouTube Shorts, Instagram
+          Reels. The content targets the same audience - students who want to
+          play games on their school Chromebooks.
+        </p>
+        <br />
+        <p>
+          One Snapchat post - "Schools tried to ban maddoxcloud.com so I did 15
+          jumping jacks, destroyed their firewall, and now I'm back in" - pulled
+          357 likes and showed the kind of viral, relatable content that
+          resonates with students. When schools block the domain, that just
+          becomes more content.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>What's Next</h2>
+        <br />
+        <p>
+          MaddoxCloud is still early. Two months in with 50K users and $500 MRR
+          is solid, but the real challenge is scaling the infrastructure to
+          handle demand without burning through cash. I'm working on:
+        </p>
+        <br />
+        <ul style="margin-left: 2rem;">
+          <li>Reducing server costs per user session</li>
+          <li>Improving stream quality and reducing latency</li>
+          <li>Expanding the game library</li>
+          <li>Eventually making the entire platform free</li>
+        </ul>
+        <br />
+        <p>
+          DuckMath proved I could build something millions of people use.
+          MaddoxCloud is the next step - harder tech, harder scaling, but a
+          much bigger opportunity.
+        </p>
+        <br />
+        <p>
+          <a href="https://maddoxcloud.com" target="_blank" rel="noopener noreferrer">
+            Try MaddoxCloud <i class="fas fa-external-link-alt"></i>
+          </a>
+        </p>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/contact">Contact</a>
+          <a href="/about">About</a>
+        </div>
+        <p>&copy; 2026 Maddox Schmidlkofer. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>

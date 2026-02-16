@@ -21,6 +21,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://maddox.page/projects/duckmath</loc>
+    <lastmod>2026-02-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maddox.page/projects/maddoxcloud</loc>
+    <lastmod>2026-02-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maddox.page/projects/quackprep</loc>
+    <lastmod>2026-02-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://maddox.page/privacy</loc>
     <lastmod>2026-02-16</lastmod>
     <priority>0.4</priority>
