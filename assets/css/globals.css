@@ -1130,8 +1130,11 @@ header nav {
   box-shadow: 9px 9px 0 var(--text);
 }
 
-/* Legal page link styles */
-.about-section a {
+/* Legal page link styles - scoped to avoid overriding third-party widgets */
+.about-section > a,
+.about-section > p a,
+.about-section > ul a,
+.about-section > br + p a {
   color: var(--text);
   font-weight: bold;
   text-decoration: underline;
@@ -1140,18 +1143,21 @@ header nav {
   transition: all 0.2s ease;
 }
 
-.about-section a:hover {
+.about-section > a:hover,
+.about-section > p a:hover,
+.about-section > ul a:hover,
+.about-section > br + p a:hover {
   background-color: var(--primary);
 }
 
-.about-section h3 {
+.about-section > h3 {
   font-size: 1.3rem;
   text-transform: uppercase;
   border-left: 6px solid var(--primary);
   padding-left: 0.8rem;
 }
 
-.about-section ul li {
+.about-section > ul li {
   margin-bottom: 0.5rem;
   line-height: 1.6;
 }
