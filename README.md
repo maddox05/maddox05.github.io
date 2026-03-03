@@ -1,6 +1,6 @@
-# maddox.page
+# maddoxschmidlkofer.com
 
-**maddox.page** — the personal site of **Maddox Schmidlkofer**, a Purdue CS student, coder, entrepreneur, and outdoor enthusiast.
+**maddoxschmidlkofer.com** — the personal site of **Maddox Schmidlkofer**, a Purdue CS student, coder, entrepreneur, and outdoor enthusiast.
 
 ---
 
@@ -26,6 +26,6 @@ Links to platforms for networking, code, and updates:
 - [X (formerly Twitter)](https://x.com/_maddox1337)
 - [GitHub](https://github.com/maddox05)
 - [YouTube](https://youtube.com/@maddoxschmidlkofer)
-- [My Site](https://maddox.page)
+- [My Site](https://maddoxschmidlkofer.com)
 
 ---
