@@ -128,10 +128,10 @@ const projects = [
     id: "maddoxcloud",
     title: "MaddoxCloud",
     date: "2025-12-15",
-    iconUrl: "https://maddoxcloud.com/favicon.ico",
+    iconUrl: "https://cloud.maddox.games/favicon.ico",
     description:
       "Cloud gaming platform to play Android games in your browser. Stream games instantly with no downloads or installs.",
-    url: "https://maddoxcloud.com",
+    url: "https://cloud.maddox.games",
     breakdownUrl: "/projects/maddoxcloud",
     type: "featured",
     metrics: {
@@ -223,7 +223,7 @@ function groupProjectsByMonth(projects) {
   projects.forEach((project) => {
     const date = new Date(project.date);
     const monthYear = `${date.getFullYear()}-${String(
-      date.getMonth() + 1
+      date.getMonth() + 1,
     ).padStart(2, "0")}`;
 
     if (!groups[monthYear]) {
@@ -286,8 +286,8 @@ function renderIndividualProject(container, project, index) {
     <div class="timeline-marker">
       <div class="timeline-icon">
         <img src="${project.iconUrl}" alt="${
-    project.title
-  }" class="timeline-icon-img" />
+          project.title
+        }" class="timeline-icon-img" />
       </div>
     </div>
     <div class="timeline-content">
@@ -336,8 +336,8 @@ function renderBundledProjects(container, monthProjects, index) {
     <div class="bundle-icon" data-project-id="${project.id}">
       <div class="timeline-icon small">
         <img src="${project.iconUrl}" alt="${
-        project.title
-      }" class="timeline-icon-img" />
+          project.title
+        }" class="timeline-icon-img" />
       </div>
       <div class="icon-tooltip">
         <h5>${project.title}</h5>
@@ -355,7 +355,7 @@ function renderBundledProjects(container, monthProjects, index) {
         </div>
       </div>
     </div>
-  `
+  `,
     )
     .join("");
 
@@ -456,7 +456,7 @@ function initScrollAnimations() {
     timeline.style.setProperty("--timeline-progress", `${percentage}%`);
     document.documentElement.style.setProperty(
       "--timeline-progress",
-      `${percentage}%`
+      `${percentage}%`,
     );
   }
 
