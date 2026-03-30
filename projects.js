@@ -130,13 +130,13 @@ const projects = [
     date: "2025-12-15",
     iconUrl: "https://cloud.maddox.games/favicon.ico",
     description:
-      "Cloud gaming platform to play Android games in your browser. Stream games instantly with no downloads or installs.",
+      "Cloud gaming platform to play Android games in your browser. Stream games instantly with no downloads or installs. Sold for $15K.",
     url: "https://cloud.maddox.games",
     breakdownUrl: "/projects/maddoxcloud",
     type: "featured",
     metrics: {
       users: "50k users",
-      revenue: "$500 MRR",
+      revenue: "Sold for $15K",
     },
     media: {
       type: "youtube",
