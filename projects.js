@@ -1,6 +1,16 @@
 // Projects data organized from newest to oldest
 const projects = [
   {
+    id: "seedoils",
+    title: "SeedOils.net",
+    date: "2026-04-03",
+    iconUrl: "https://seedoils.net/logo.png",
+    description: "A directory of clean, non-toxic products",
+    url: "https://seedoils.net",
+    type: "main",
+    metrics: {},
+  },
+  {
     id: "coldcallbot",
     title: "ColdCallBot",
     date: "2025-06-02",
