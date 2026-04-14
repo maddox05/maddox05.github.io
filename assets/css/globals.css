@@ -1261,3 +1261,149 @@ header nav {
     gap: 0.75rem;
   }
 }
+
+/* ===== Touch & Click Support ===== */
+
+.timeline-content.expanded .timeline-details {
+  max-height: 500px;
+  opacity: 1;
+  margin-bottom: 1rem;
+}
+
+.bundle-icon.tooltip-active .icon-tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.surprise-btn {
+  font-weight: bold;
+  letter-spacing: 2px;
+  transform: rotate(-1deg);
+  display: inline-block;
+  background-color: var(--tertiary);
+  color: white;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.surprise-btn:hover {
+  background-color: var(--text);
+}
+
+.surprise-btn:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* ===== Mobile Improvements ===== */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  .photo-card.large {
+    grid-column: span 1;
+  }
+
+  .photo-card {
+    box-shadow: 6px 6px 0 var(--text);
+  }
+
+  .photo-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0 var(--text);
+  }
+
+  .about-section {
+    box-shadow: 6px 6px 0 var(--text);
+    padding: 1rem;
+  }
+
+  .link-section {
+    box-shadow: 6px 6px 0 var(--text);
+  }
+
+  .press-card {
+    box-shadow: 4px 4px 0 var(--text);
+  }
+
+  .card {
+    box-shadow: 6px 6px 0 var(--text);
+  }
+
+  #game-modal > div {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    box-shadow: none !important;
+    border-width: 2px !important;
+  }
+
+  .bundle-icon.tooltip-active .icon-tooltip {
+    position: fixed;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: min(280px, calc(100vw - 2rem));
+    z-index: 1000;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+
+  .timeline-content a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+
+  .links a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .link-section h3 {
+    font-size: 1.2rem;
+  }
+
+  header nav a {
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .press-card-body p {
+    font-size: 0.85rem;
+  }
+
+  .glitch-effect::before,
+  .glitch-effect::after {
+    display: none;
+  }
+}

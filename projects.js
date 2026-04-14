@@ -267,6 +267,7 @@ function renderProjectsTimeline() {
     if (monthProjects.length >= 2) {
       // Bundle projects for this month
       renderBundledProjects(container, monthProjects, itemIndex);
+      itemIndex++;
     } else {
       // Render individual projects
       monthProjects.forEach((project) => {
@@ -274,7 +275,6 @@ function renderProjectsTimeline() {
         itemIndex++;
       });
     }
-    itemIndex++;
   });
 }
 
@@ -317,10 +317,10 @@ function renderIndividualProject(container, project, index) {
           }
         </div>
       </div>
-      <a href="${project.url}" target="_blank" rel="noopener noreferrer">
+      ${project.url ? `<a href="${project.url}" target="_blank" rel="noopener noreferrer">
         Visit Site <i class="fas fa-external-link-alt"></i>
-      </a>
-      ${project.breakdownUrl ? `<a href="${project.breakdownUrl}" style="margin-left: 0.5rem;">Read More <i class="fas fa-arrow-right"></i></a>` : ""}
+      </a>` : ""}
+      ${project.breakdownUrl ? `<a href="${project.breakdownUrl}"${project.url ? ' style="margin-left: 0.5rem;"' : ""}>Read More <i class="fas fa-arrow-right"></i></a>` : ""}
     </div>
   `;
 
@@ -454,13 +454,9 @@ function initScrollAnimations() {
     const windowHeight = window.innerHeight;
     const timelineHeight = timeline.offsetHeight;
 
-    // Calculate how much of the timeline is visible
-    const visibleStart = Math.max(0, -rect.top);
-    const visibleEnd = Math.min(timelineHeight, windowHeight - rect.top);
-    const visibleHeight = Math.max(0, visibleEnd - visibleStart);
-
-    // Calculate percentage of timeline that should be filled
-    const percentage = Math.min(100, (visibleHeight / timelineHeight) * 100);
+    // Track how far the viewport center has scrolled through the timeline
+    const scrollProgress = -rect.top + windowHeight * 0.5;
+    const percentage = Math.max(0, Math.min(100, (scrollProgress / timelineHeight) * 100));
 
     // Update the timeline line height
     timeline.style.setProperty("--timeline-progress", `${percentage}%`);
@@ -498,9 +494,45 @@ function initScrollAnimations() {
   updateTimelineLine(); // Initial call
 }
 
+// Touch/click support for timeline interactions
+function initTouchSupport() {
+  // Click to expand/collapse timeline details
+  document.querySelectorAll(".timeline-content").forEach((content) => {
+    content.addEventListener("click", (e) => {
+      if (e.target.closest("a")) return;
+      content.classList.toggle("expanded");
+    });
+  });
+
+  // Click to show bundle tooltips
+  document.querySelectorAll(".bundle-icon").forEach((icon) => {
+    icon.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (e.target.closest(".icon-tooltip")) return;
+      const wasActive = icon.classList.contains("tooltip-active");
+      document.querySelectorAll(".bundle-icon.tooltip-active").forEach((other) => {
+        other.classList.remove("tooltip-active");
+      });
+      if (!wasActive) {
+        icon.classList.add("tooltip-active");
+      }
+    });
+  });
+
+  // Close tooltips when clicking outside
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".bundle-icon.tooltip-active").forEach((icon) => {
+      icon.classList.remove("tooltip-active");
+    });
+  });
+}
+
 // Initialize timeline when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   renderProjectsTimeline();
   // Wait a bit for DOM to be fully ready, then init animations
-  setTimeout(initScrollAnimations, 100);
+  setTimeout(() => {
+    initScrollAnimations();
+    initTouchSupport();
+  }, 100);
 });
