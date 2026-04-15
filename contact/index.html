@@ -41,92 +41,14 @@
         <h2>Get In Touch</h2>
         <br />
         <p>
-          Have a question, want to collaborate on a project, or just want to say
-          hi? Feel free to reach out through any of the methods below or use the
-          contact form.
+          For best results, email me here:
         </p>
-      </section>
-
-      <section class="about-section">
-        <h2>Contact Form</h2>
         <br />
-        <form id="contact-form" onsubmit="sendEmail(event)">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              placeholder="Your name"
-            />
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              required
-              placeholder="What's this about?"
-            />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="6"
-              required
-              placeholder="Your message..."
-            ></textarea>
-          </div>
-          <button type="submit" class="form-submit">Send Message</button>
-        </form>
-        <script>
-          function sendEmail(e) {
-            e.preventDefault();
-            var name = document.getElementById("name").value;
-            var subject = document.getElementById("subject").value;
-            var message = document.getElementById("message").value;
-            var body = "Hi Maddox,\n\nMy name is " + name + ".\n\n" + message;
-            window.location.href =
-              "mailto:maddoxpublic@gmail.com" +
-              "?subject=" + encodeURIComponent(subject) +
-              "&body=" + encodeURIComponent(body);
-          }
-        </script>
+        <p>
+          <strong><span id="contact-eml"></span><noscript>maddoxpublic [at] gmail [dot] com</noscript></strong>
+        </p>
+        <script>!function(){var e=document.getElementById('contact-eml'),a=['m','a','d','d','o','x'],b='public',c='gm',d='ail',f='.com';e.textContent=a.join('')+b+'\u0040'+c+d+f;}();</script>
       </section>
-
-      <div class="link-section">
-        <h3>Connect With Me</h3>
-        <div class="links">
-          <a
-            href="https://www.linkedin.com/in/maddox-schmidlkofer/"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fab fa-linkedin"></i> LinkedIn</a
-          >
-          <a
-            href="https://x.com/_maddox1337"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fab fa-twitter"></i> X</a
-          >
-          <a
-            href="https://github.com/maddox05"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fab fa-github"></i> GitHub</a
-          >
-          <a
-            href="https://youtube.com/@maddoxschmidlkofer"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fab fa-youtube"></i> YouTube</a
-          >
-        </div>
-      </div>
 
       <footer class="site-footer">
         <div class="footer-links">
@@ -135,6 +57,8 @@
           <a href="/contact">Contact</a>
           <a href="/about">About</a>
         </div>
+        <p class="footer-email"><span id="eml"></span><noscript>maddoxpublic [at] gmail [dot] com</noscript></p>
+        <script>!function(){var e=document.getElementById('eml'),a=['m','a','d','d','o','x'],b='public',c='gm',d='ail',f='.com';e.textContent=a.join('')+b+'\u0040'+c+d+f;}();</script>
         <p>&copy; 2026 Maddox Schmidlkofer. All rights reserved.</p>
       </footer>
     </div>

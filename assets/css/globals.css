@@ -1160,6 +1160,12 @@ header nav {
   color: #666;
 }
 
+.footer-email {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
 /* Contact form */
 .form-group {
   margin-bottom: 1.5rem;
