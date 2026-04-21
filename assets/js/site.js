@@ -83,6 +83,8 @@
     footer.className = "site-footer";
     footer.innerHTML =
       '<div class="footer-links">' +
+      '<a href="/">Home</a>' +
+      '<a href="/blog">Blog</a>' +
       '<a href="/privacy">Privacy Policy</a>' +
       '<a href="/terms">Terms of Service</a>' +
       '<a href="/contact">Contact</a>' +
