@@ -47,7 +47,7 @@ body::before {
 }
 
 header {
-  margin-bottom: 2rem;
+  margin-bottom: 0.75rem;
   border-bottom: 5px solid var(--text);
   padding-bottom: 1rem;
   position: relative;
@@ -56,38 +56,91 @@ header {
   align-items: flex-start;
 }
 
-header nav a {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--text);
-  padding: 0.5rem 1rem;
-  border: 3px solid var(--text);
-  transition: all 0.2s ease;
-  margin-left: 1rem;
-  display: inline-block;
+/* Social bar below header */
+.social-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--secondary);
+  border: 4px solid var(--text);
+  box-shadow: 6px 6px 0 var(--text);
 }
 
-header nav a:hover {
+.social-icons {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.2rem;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.social-icons a:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.social-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--tertiary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  border: 3px solid var(--text);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: "Courier New", monospace;
+}
+
+.social-cta:hover {
   background-color: var(--primary);
   color: var(--text);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--text);
+}
+
+.social-cta i {
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.social-cta:hover i {
+  transform: translateX(3px);
 }
 
 @media (max-width: 768px) {
-  header {
+  .social-bar {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 0.75rem;
+    align-items: stretch;
   }
 
-  header nav {
-    margin-top: 1rem;
-    width: 100%;
+  .social-icons {
+    justify-content: center;
   }
 
-  header nav a {
-    margin-left: 0;
-    width: 100%;
+  .social-cta {
     text-align: center;
+    justify-content: center;
   }
 }
 
@@ -1116,12 +1169,6 @@ h2 {
   z-index: 3;
 }
 
-/* Navigation with multiple links */
-header nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
 
 /* Footer */
 .site-footer {
@@ -1257,10 +1304,6 @@ header nav {
 }
 
 @media (max-width: 768px) {
-  header nav {
-    flex-direction: column;
-  }
-
   .footer-links {
     flex-direction: column;
     align-items: center;
@@ -1399,9 +1442,10 @@ header nav {
     font-size: 1.2rem;
   }
 
-  header nav a {
-    font-size: 1.2rem;
-    padding: 0.4rem 0.8rem;
+  .social-icons a {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
   }
 
   .press-card-body p {

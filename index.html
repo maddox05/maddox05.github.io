@@ -26,6 +26,8 @@
       gtag("config", "G-5VNZJZT1MH");
     </script>
     <link rel="stylesheet" href="assets/css/globals.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/assets/js/site.js"></script>
     <script type="module">
       import { main } from "./goose/Main.js";
 
@@ -56,11 +58,6 @@
             Click me for a surprise
           </button>
         </div>
-        <nav>
-          <a href="/blog">Blog</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-        </nav>
       </header>
 
       <section class="about-section">
@@ -211,47 +208,7 @@
         </div>
       </section>
 
-      <div class="link-section">
-        <h3>Connect With Me</h3>
-        <div class="links">
-          <a
-            href="https://www.linkedin.com/in/maddox-schmidlkofer/"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fab fa-linkedin"></i> LinkedIn</a
-          >
-          <a
-            href="https://x.com/_maddox1337"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fab fa-twitter"></i> X</a
-          >
-          <a
-            href="https://github.com/maddox05"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fab fa-github"></i> GitHub</a
-          >
-          <a
-            href="https://youtube.com/@maddoxschmidlkofer"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fab fa-youtube"></i> YouTube</a
-          >
-        </div>
-      </div>
-
-      <footer class="site-footer">
-        <div class="footer-links">
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms of Service</a>
-          <a href="/contact">Contact</a>
-          <a href="/about">About</a>
-        </div>
-        <p class="footer-email"><span id="eml"></span><noscript>maddoxpublic [at] gmail [dot] com</noscript></p>
-        <script>!function(){var e=document.getElementById('eml'),a=['m','a','d','d','o','x'],b='public',c='gm',d='ail',f='.com';e.textContent=a.join('')+b+'\u0040'+c+d+f;}();</script>
-        <p>&copy; 2026 Maddox Schmidlkofer. All rights reserved.</p>
-      </footer>
+      <footer id="site-footer"></footer>
     </div>
     <!-- Game Modal -->
     <div
