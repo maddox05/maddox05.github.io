@@ -25,7 +25,7 @@
       label: "YouTube",
     },
     {
-      href: "https://www.snapchat.com/@magicmaddox",
+      href: "https://www.snapchat.com/@magicmaddox1",
       icon: "fab fa-snapchat-ghost",
       label: "Snapchat",
     },
