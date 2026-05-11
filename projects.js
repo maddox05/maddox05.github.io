@@ -1,6 +1,19 @@
 // Projects data organized from newest to oldest
 const projects = [
   {
+    id: "tallow",
+    title: "Tallow",
+    date: "2026-05-02",
+    iconUrl: "https://tallow.app/site_icon.png",
+    description:
+      "Find seed oil free restaurants near you. Barcode scanner with ingredient analysis, Tallow scores, and independent lab testing for microplastics, PFAS, and heavy metals.",
+    url: "https://tallow.app",
+    type: "main",
+    metrics: {
+      users: "App Coming Soon!",
+    },
+  },
+  {
     id: "seedoils",
     title: "SeedOils.net",
     date: "2026-04-03",
@@ -138,7 +151,7 @@ const projects = [
     id: "maddoxcloud",
     title: "MaddoxCloud",
     date: "2025-12-15",
-    iconUrl: "https://cloud.maddox.games/favicon.ico",
+    iconUrl: "assets/img/icons/maddox.cloud.png",
     description:
       "Cloud gaming platform to play Android games in your browser. Stream games instantly with no downloads or installs. Sold for $15K.",
     url: "https://cloud.maddox.games",
@@ -317,9 +330,13 @@ function renderIndividualProject(container, project, index) {
           }
         </div>
       </div>
-      ${project.url ? `<a href="${project.url}" target="_blank" rel="noopener noreferrer">
+      ${
+        project.url
+          ? `<a href="${project.url}" target="_blank" rel="noopener noreferrer">
         Visit Site <i class="fas fa-external-link-alt"></i>
-      </a>` : ""}
+      </a>`
+          : ""
+      }
       ${project.breakdownUrl ? `<a href="${project.breakdownUrl}"${project.url ? ' style="margin-left: 0.5rem;"' : ""}>Read More <i class="fas fa-arrow-right"></i></a>` : ""}
     </div>
   `;
@@ -456,7 +473,10 @@ function initScrollAnimations() {
 
     // Track how far the viewport center has scrolled through the timeline
     const scrollProgress = -rect.top + windowHeight * 0.5;
-    const percentage = Math.max(0, Math.min(100, (scrollProgress / timelineHeight) * 100));
+    const percentage = Math.max(
+      0,
+      Math.min(100, (scrollProgress / timelineHeight) * 100),
+    );
 
     // Update the timeline line height
     timeline.style.setProperty("--timeline-progress", `${percentage}%`);
@@ -510,9 +530,11 @@ function initTouchSupport() {
       e.stopPropagation();
       if (e.target.closest(".icon-tooltip")) return;
       const wasActive = icon.classList.contains("tooltip-active");
-      document.querySelectorAll(".bundle-icon.tooltip-active").forEach((other) => {
-        other.classList.remove("tooltip-active");
-      });
+      document
+        .querySelectorAll(".bundle-icon.tooltip-active")
+        .forEach((other) => {
+          other.classList.remove("tooltip-active");
+        });
       if (!wasActive) {
         icon.classList.add("tooltip-active");
       }
