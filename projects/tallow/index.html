@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/img/mtb_icon.png" />
+    <title>Tallow - Project Breakdown | Maddox's Site</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5VNZJZT1MH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-5VNZJZT1MH");
+    </script>
+    <link rel="stylesheet" href="/assets/css/globals.css" />
+    <script src="/assets/js/site.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div>
+          <h1 class="glitch-effect">Tallow</h1>
+        </div>
+      </header>
+
+      <section class="about-section">
+        <h2>The Story</h2>
+        <br />
+        <p>
+          After spending years building games and infra for kids on
+          Chromebooks, I wanted to build something for the rest of my life -
+          something I'd actually use every week. I'd already been pulling
+          ingredient lists apart in the grocery aisle for years, dodging seed
+          oils, scanning for additives the EU banned a decade ago, and
+          guessing whether the "natural flavors" hid anything weird. Yuka
+          existed, but it scored a Coke higher than raw beef tallow because
+          its model was built around the European nutrient profile, not the
+          stuff seed-oil-skeptics and the carnivore-adjacent crowd actually
+          care about.
+        </p>
+        <br />
+        <p>
+          So I built Tallow. Point your phone at a barcode and you get a
+          0-100 score in seconds, with a transparent breakdown of seed oils,
+          additives, NOVA processing level, and plastic exposure. Restaurant
+          map and self-commissioned lab panels for microplastics and PFAS
+          are next.
+        </p>
+        <br />
+        <p>
+          v1.0 shipped to the App Store in May 2026.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>By The Numbers</h2>
+        <br />
+        <div
+          class="photo-grid"
+          style="grid-template-columns: repeat(3, 1fr); gap: 1rem"
+        >
+          <div
+            class="card"
+            style="text-align: center; box-shadow: 6px 6px 0 var(--text)"
+          >
+            <h3
+              style="
+                font-size: 2.5rem;
+                border-bottom: none;
+                color: var(--tertiary);
+              "
+            >
+              1
+            </h3>
+            <p style="text-transform: uppercase; font-weight: bold">User (me)</p>
+          </div>
+          <div
+            class="card"
+            style="text-align: center; box-shadow: 6px 6px 0 var(--text)"
+          >
+            <h3
+              style="
+                font-size: 2.5rem;
+                border-bottom: none;
+                color: var(--tertiary);
+              "
+            >
+              4
+            </h3>
+            <p style="text-transform: uppercase; font-weight: bold">
+              Score Pillars
+            </p>
+          </div>
+          <div
+            class="card"
+            style="text-align: center; box-shadow: 6px 6px 0 var(--text)"
+          >
+            <h3
+              style="
+                font-size: 2.5rem;
+                border-bottom: none;
+                color: var(--tertiary);
+              "
+            >
+              v1.0
+            </h3>
+            <p style="text-transform: uppercase; font-weight: bold">
+              Live on iPhone
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>How It Works</h2>
+        <br />
+        <p>
+          Scan a barcode and the app fires a two-tier enrichment pipeline.
+          Tier 1 hits Open Food Facts synchronously - you see the product,
+          ingredient list, nutrition, and a preliminary score within a couple
+          seconds. Tier 2 runs asynchronously in a Supabase Edge Function,
+          calling the OpenAI Responses API with web search to pull
+          contaminant data from oasishealth.app, Florida Department of
+          Health lab reports, EWG, Consumer Reports, FDA testing data, and
+          PubMed studies. The mobile client subscribes to a Supabase
+          Realtime channel on the scan job, so the Sources section
+          populates live - usually ten to fifteen seconds later - without a
+          refresh.
+        </p>
+        <br />
+        <p>
+          The 0-100 score itself is computed on-device. Four weighted
+          pillars: seed oils, additives (cross-referenced against EU bans
+          and FDA flags), NOVA processing group, and plastic exposure
+          (containers, linings, plus lab-confirmed microplastic and PFAS
+          levels when available). Sourcing signals like organic,
+          grass-fed, pasture-raised, and wild-caught nudge the score up.
+          The math is open - you can audit it.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>Features</h2>
+        <br />
+        <ul style="margin-left: 2rem">
+          <li>
+            <strong>Barcode scanner:</strong> Point and shoot. Every product
+            gets a NOVA group (1-4) and a 0-100 Tallow score in seconds,
+            with every flagged additive translated into plain English.
+          </li>
+          <li>
+            <strong>Kid-Safe Mode:</strong> Stricter thresholds for
+            artificial dyes, controversial preservatives, and stuff banned
+            in EU foods aimed at children.
+          </li>
+          <li>
+            <strong>Smart Swaps:</strong> When a product flunks, the app
+            suggests a better-scoring alternative in the same category.
+          </li>
+          <li>
+            <strong>Lab Tested badge:</strong> Surfaces published lab data
+            on the scan card when contaminant studies exist for the product
+            or brand.
+          </li>
+          <li>
+            <strong>Save & History:</strong> Bookmark products, browse
+            everything you've ever scanned.
+          </li>
+          <li>
+            <strong>Restaurant map (coming soon):</strong> A crowd-sourced
+            map that scores every restaurant on what they actually cook
+            with - filter by no seed oils, NOVA 1-2, or glass-only
+            packaging.
+          </li>
+          <li>
+            <strong>Lab report archive (coming soon):</strong>
+            Tallow-commissioned panels on bottled water, takeout
+            containers, and other contact-heavy items, browsable on the
+            web.
+          </li>
+        </ul>
+      </section>
+
+      <section class="about-section">
+        <h2>Tech Stack</h2>
+        <br />
+        <ul style="margin-left: 2rem">
+          <li>
+            <strong>Mobile:</strong> Expo SDK 54, Expo Router, React Native
+            0.81, TypeScript. Dev builds via EAS because Apple Sign In and
+            the camera need native modules.
+          </li>
+          <li>
+            <strong>Backend:</strong> Supabase end-to-end - Postgres, Auth,
+            Realtime, and Edge Functions. No separate API server. The
+            mobile client reads straight through RLS.
+          </li>
+          <li>
+            <strong>Data sources:</strong> Open Food Facts for the base
+            product catalog; OpenAI Responses API with web search for
+            contaminant enrichment, prompted to prioritize oasishealth.app
+            and Florida Department of Health before other reputable labs.
+          </li>
+          <li>
+            <strong>Realtime delivery:</strong> Tier 2 enrichment is async,
+            signaled to the client via Supabase Realtime on the
+            <code>scan_jobs</code> table - no polling.
+          </li>
+          <li>
+            <strong>Scoring:</strong> Standalone TypeScript package
+            (<code>packages/shared</code>) so the scoring lib has its own
+            unit tests and stays portable to the web client.
+          </li>
+          <li>
+            <strong>Marketing site:</strong> Next.js on Cloudflare Workers
+            via OpenNext - <a href="https://tallow.app" target="_blank" rel="noopener noreferrer">tallow.app</a>.
+          </li>
+        </ul>
+      </section>
+
+      <section class="about-section">
+        <h2>The Score System</h2>
+        <br />
+        <p>
+          The 0-100 score breaks down into three bands so it's readable at a
+          glance:
+        </p>
+        <br />
+        <div
+          class="photo-grid"
+          style="grid-template-columns: repeat(3, 1fr); gap: 1rem"
+        >
+          <div
+            class="card"
+            style="text-align: center; box-shadow: 6px 6px 0 var(--text)"
+          >
+            <h3
+              style="
+                font-size: 2rem;
+                border-bottom: none;
+                color: #e53935;
+              "
+            >
+              0-49
+            </h3>
+            <p style="text-transform: uppercase; font-weight: bold">Avoid</p>
+          </div>
+          <div
+            class="card"
+            style="text-align: center; box-shadow: 6px 6px 0 var(--text)"
+          >
+            <h3
+              style="
+                font-size: 2rem;
+                border-bottom: none;
+                color: #ff9800;
+              "
+            >
+              50-74
+            </h3>
+            <p style="text-transform: uppercase; font-weight: bold">Watch</p>
+          </div>
+          <div
+            class="card"
+            style="text-align: center; box-shadow: 6px 6px 0 var(--text)"
+          >
+            <h3
+              style="
+                font-size: 2rem;
+                border-bottom: none;
+                color: #43a047;
+              "
+            >
+              75-100
+            </h3>
+            <p style="text-transform: uppercase; font-weight: bold">Safe</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>What's Next</h2>
+        <br />
+        <p>
+          v1.0 nails the core scan-and-score loop on iPhone. The roadmap
+          from here is what turns Tallow into the thing I actually wanted
+          when I started: an Android build, a web client running the same
+          scoring lib, the crowd-sourced restaurant map, and the
+          self-commissioned lab report archive. The hard part isn't the
+          code - it's recruiting a beachhead community of seed-oil-aware
+          users who will actually submit and rate restaurants, because the
+          map is only as good as the contributions behind it.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>Try It</h2>
+        <br />
+        <p>
+          Tallow is live on the App Store. The marketing site at
+          <a href="https://tallow.app" target="_blank" rel="noopener noreferrer">tallow.app</a>
+          has the download link, screenshots, and the full breakdown of the
+          scoring methodology.
+        </p>
+      </section>
+
+      <footer id="site-footer"></footer>
+    </div>
+  </body>
+</html>

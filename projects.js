@@ -8,9 +8,10 @@ const projects = [
     description:
       "Find seed oil free restaurants near you. Barcode scanner with ingredient analysis, Tallow scores, and independent lab testing for microplastics, PFAS, and heavy metals.",
     url: "https://tallow.app",
+    breakdownUrl: "/projects/tallow",
     type: "main",
     metrics: {
-      users: "App Coming Soon!",
+      users: "12 Users!",
     },
   },
   {
