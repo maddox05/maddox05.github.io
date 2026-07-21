@@ -11,7 +11,8 @@ const projects = [
     breakdownUrl: "/projects/tallow",
     type: "main",
     metrics: {
-      users: "12 Users!",
+      users: "6400+ users",
+      revenue: "$1.2k MRR",
     },
   },
   {
